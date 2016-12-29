@@ -6,12 +6,14 @@
               android:background="@color/pageBgColor"
               android:orientation="vertical">
 
+    <include
+        layout="@layout/top_bar_layout"/>
+
     <FrameLayout
         android:id="@+id/fl_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-
 
     <FrameLayout
         android:layout_width="match_parent"
