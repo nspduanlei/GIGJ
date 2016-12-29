@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_com"
+        android:layout_marginRight="@dimen/margin_com"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/InputLLStyle">
+            <TextView
+                style="@style/InputTvStyle"
+                android:text="更改头像"/>
+            <View
+                style="@style/InputLine"/>
+            <TextView
+                style="@style/SelectTextStyle"
+                android:text="请选择文件  "/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/InputLLStyle">
+            <TextView
+                style="@style/InputTvStyle"
+                android:text="        姓名"/>
+            <View
+                style="@style/InputLine"/>
+            <EditText
+                style="@style/InputET"
+                android:hint="请输入姓名"/>
+        </LinearLayout>
+
+        <!--性别-->
+        <LinearLayout
+            style="@style/InputLLStyle">
+            <TextView
+                style="@style/InputTvStyle"
+                android:text="        姓别"/>
+            <View
+                style="@style/InputLine"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 男"
+                    android:textColor="@color/titleColor"
+                    android:button="@drawable/button_bg_radio_sex" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 女"
+                    android:textColor="@color/titleColor"
+                    android:button="@drawable/button_bg_radio_sex"
+                android:layout_marginLeft="20dp"/>
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/InputLLStyle">
+            <TextView
+                style="@style/InputTvStyle"
+                android:text="身份证号"/>
+            <View
+                style="@style/InputLine"/>
+            <EditText
+                style="@style/InputET"
+                android:hint="请输入身份证号"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/InputLLStyle">
+            <TextView
+                style="@style/InputTvStyle"
+                android:text="出生日期"/>
+            <View
+                style="@style/InputLine"/>
+            <EditText
+                style="@style/InputET"
+                android:hint="请输入出生日期"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/InputLLStyle">
+            <TextView
+                style="@style/InputTvStyle"
+                android:text="        昵称"/>
+            <View
+                style="@style/InputLine"/>
+            <EditText
+                style="@style/InputET"
+                android:hint="请输入昵称"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/InputLLStyle">
+            <TextView
+                style="@style/InputTvStyle"
+                android:text="身份证正面"/>
+            <View
+                style="@style/InputLine"/>
+            <TextView
+                style="@style/SelectTextStyle"
+                android:text="请选择文件  "/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/InputLLStyle">
+            <TextView
+                style="@style/InputTvStyle"
+                android:text="身份证反面"/>
+            <View
+                style="@style/InputLine"/>
+            <TextView
+                style="@style/SelectTextStyle"
+                android:text="请选择文件  "/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_h"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorMain"
+            android:text="保存修改"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+    <include
+        layout="@layout/loading_layout"/>
+    <include
+        layout="@layout/top_bar_layout"/>
+
+
+</FrameLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.app.gigj">
+
+    <!--允许应用程序联网，以便向我们的服务器端发送数据。-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--检测联网方式，区分用户设备使用的是2G、3G或是WiFi-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--获取用户设备的mac地址，在平板设备上，无法通过imei标示设备，我们会将mac地址作为用户的唯一标识-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--获取用户设备的IMEI，通过IMEI和mac来唯一的标识用户-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:name=".app.MyApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".views.activities.LaunchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".views.activities.GuideActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.LoginActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.RegisterActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.UserInfoActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.shipper.MainActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.shipper.AuthCenterActivity"
+                  android:screenOrientation="portrait"/>
+
+        <!--umeng-->
+        <meta-data android:name="UMENG_APPKEY" android:value="5847adb94544cb770a0012ad"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="${TD_CHANNEL_ID}"/>
+
+        <!--高德地图-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="7b501a548121e63a2c3f10db5373549a"/>
+
+    </application>
+
+</manifest>

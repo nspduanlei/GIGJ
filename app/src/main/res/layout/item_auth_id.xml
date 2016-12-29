@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_22"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ll_11"
+    android:layout_toRightOf="@id/ll_21"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="本人正面照"
+        android:textColor="@color/commonColor"
+        android:textSize="@dimen/tip_font_size"/>
+    <ImageView
+        android:layout_width="89dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/hintColor"
+        android:scaleType="center"
+        android:src="@drawable/icon_add"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:text="未上传"
+        android:textColor="@color/hintColor"
+        android:textSize="@dimen/tip_font_size"/>
+</LinearLayout>

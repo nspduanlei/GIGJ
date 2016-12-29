@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top_bar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_com"
+        android:layout_marginRight="@dimen/margin_com"
+        android:layout_marginTop="@dimen/top_bar_height"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logo_login"/>
+
+
+        <LinearLayout
+            style="@style/InputLLStyle">
+            <TextView
+                style="@style/InputTvStyle"
+                android:drawableLeft="@drawable/icon_phone"
+                android:text="  手机号 "/>
+            <View
+                style="@style/InputLine"/>
+            <EditText
+                style="@style/InputET"
+                android:hint="请输入手机号"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/InputLLStyle"
+            android:layout_marginTop="15dp">
+            <TextView
+                style="@style/InputTvStyle"
+                android:drawableLeft="@drawable/icon_pw"
+                android:text="  密    码 "/>
+            <View
+                style="@style/InputLine"/>
+            <EditText
+                style="@style/InputET"
+                android:hint="请输入密码"
+                android:inputType="numberPassword"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_h"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorMain"
+            android:text="登  录"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/margin_com"
+        android:text="忘记密码"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="@dimen/margin_com"
+        android:text="联系客服"
+        android:textColor="@color/titleColor"
+        android:textSize="@dimen/title_font_size"/>
+
+
+    <include
+        layout="@layout/loading_layout"/>
+
+
+</FrameLayout>

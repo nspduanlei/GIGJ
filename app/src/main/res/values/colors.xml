@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--标题颜色-->
+    <color name="titleColor">#5F6061</color>
+
+    <!--非要点内容颜色-->
+    <color name="notImColor">#CECFD0</color>
+
+    <!--提示文本颜色-->
+    <color name="hintColor">#CECFD0</color>
+
+    <!--可点击内容颜色-->
+    <color name="clickTextColor">#507db0</color>
+
+    <!--普通内容颜色-->
+    <color name="commonColor">#8e8e93</color>
+
+    <!--名称-->
+    <color name="nameColor">@color/colorBlack</color>
+
+    <!--页面 背景色-->
+    <color name="pageBgColor">#F2F7FC</color>
+
+    <!--标题内容 背景色-->
+    <color name="titleBgColor">#F4F5F6</color>
+
+    <!-- 一般内容 背景色-->
+    <color name="commonBgColor">#f7f7f7</color>
+
+    <!--线条颜色-->
+    <color name="lineColor">#e6e6e6</color>
+
+    <!--控件背景色-->
+    <color name="colorBgButton">@color/colorMain</color>
+    <color name="colorBgButtonPass">#E21a21</color>
+    <color name="colorBgEdit">#f0f0f0</color>
+
+    <!--基本色-->
+    <color name="colorMain">#E21B31</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackT">#aaffffff</color>
+    <color name="colorTransparent">#00000000</color>
+
+
+    <!--下拉刷新-->
+    <color name="swipe_color_1">#00ff00</color>
+    <color name="swipe_color_2">#ccff00</color>
+    <color name="swipe_color_3">#ffff00</color>
+    <color name="swipe_color_4">#ee00ee</color>
+
+    <color name="color_indicator">#888888</color>
+    <color name="input_bg">#A2A3A5</color>
+    <color name="navbg">#37302D</color>
+
+    <!--role color-->
+    <color name="colorRole1">@color/colorMain</color>
+    <color name="colorRole2">#FC7E58</color>
+    <color name="colorRole3">#F19926</color>
+    <color name="colorRole4">#854DEC</color>
+</resources>

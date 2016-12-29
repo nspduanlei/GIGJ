@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top_bar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_bar_height"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="@dimen/margin_com"
+            android:layout_marginRight="@dimen/margin_com"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_head"
+                android:text="duanlei"/>
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_name"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/iv_head"
+                android:background="@color/colorRole3"
+                android:text="未申请角色"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_msg"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/iv_head"
+                android:text="发货:0  订单:0"
+                android:textColor="@color/commonColor"
+                android:textSize="11sp"/>
+
+            <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@drawable/arrow_right"/>-->
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/toolbar_shadow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="完善个人资料申请角色，点击此处完善"
+            android:textColor="@color/commonColor"
+            android:textSize="@dimen/common_font_size"/>
+
+        <Button
+            android:id="@+id/btn_shipper"
+            android:layout_width="200dp"
+            android:layout_height="@dimen/input_h"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shape_bg_role_1"
+            android:text="申请货主"
+            android:textColor="@color/colorWhite"/>
+        <Button
+            android:id="@+id/btn_driver"
+            android:layout_width="200dp"
+            android:layout_height="@dimen/input_h"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shape_bg_role_2"
+            android:text="申请司机"
+            android:textColor="@color/colorWhite"/>
+        <Button
+            android:id="@+id/btn_car_owner"
+            android:layout_width="200dp"
+            android:layout_height="@dimen/input_h"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shape_bg_role_3"
+            android:text="申请车主"
+            android:textColor="@color/colorWhite"/>
+        <Button
+            android:id="@+id/btn_admin"
+            android:layout_width="200dp"
+            android:layout_height="@dimen/input_h"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shape_bg_role_4"
+            android:text="申请员工"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/loading_layout"/>
+
+
+</FrameLayout>

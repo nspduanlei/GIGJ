@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GIGJ</string>
+
+    <string name="year" translatable="false">年前</string>
+    <string name="month" translatable="false">月前</string>
+    <string name="day" translatable="false">天前</string>
+    <string name="hour" translatable="false">小时前</string>
+    <string name="min" translatable="false">分钟前</string>
+    <string name="sec" translatable="false">秒前</string>
+    <string name="justnow" translatable="false">刚刚</string>
+    <string name="yesterday" translatable="false">昨天</string>
+    <string name="the_day_before_yesterday" translatable="false">前天</string>
+    <string name="today" translatable="false">今天</string>
+    <string name="date_format" translatable="false">M月d日 HH:mm</string>
+    <string name="year_format" translatable="false">yyyy年 M月d日 HH:mm</string>
+    <string name="date_format_custom" translatable="false">yyyy.M.d</string>
+    <string name="date_format_work_place" translatable="false">yyyy年 M月</string>
+    <string name="title_login">登录</string>
+    <string name="title_register">注册</string>
+    <string name="title_select_role">选择角色</string>
+    <string name="title_user_info">个人资料</string>
+    <string name="title_auth_center">认证中心</string>
+    <string name="auth_hint_1">您所上传的所以信息都将只用于核实您的身份，不不会向任何第三方泄漏，放心上传，认证后将享有更多权限。</string>
+</resources>

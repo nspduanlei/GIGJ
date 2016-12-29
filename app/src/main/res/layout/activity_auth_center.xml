@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <include
+        layout="@layout/top_bar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_bar_height"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/margin_com"
+            android:layout_marginRight="@dimen/margin_com"
+            android:layout_marginTop="10dp"
+            android:text="@string/auth_hint_1"
+            android:textColor="@color/commonColor"
+            android:textSize="@dimen/common_font_size"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_com"
+            android:layout_marginTop="20dp"
+            android:text="认证上传"
+            android:textColor="@color/colorMain"
+            android:textSize="@dimen/common_font_size"/>
+
+
+        <com.app.gigj.views.widget.NoScrollGridView
+            android:id="@+id/gv_ids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2"
+            android:verticalSpacing="20dp"/>
+
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="10dp">-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_11"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_marginRight="40dp"-->
+        <!--android:orientation="vertical">-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="身份证正面"-->
+        <!--android:textColor="@color/commonColor"-->
+        <!--android:textSize="@dimen/tip_font_size"/>-->
+        <!--<ImageView-->
+        <!--android:layout_width="89dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--android:background="@color/hintColor"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@drawable/icon_add"/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:text="未上传"-->
+        <!--android:textColor="@color/hintColor"-->
+        <!--android:textSize="@dimen/tip_font_size"/>-->
+        <!--</LinearLayout>-->
+
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_12"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@id/ll_11"-->
+        <!--android:orientation="vertical">-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="身份证反面"-->
+        <!--android:textColor="@color/commonColor"-->
+        <!--android:textSize="@dimen/tip_font_size"/>-->
+        <!--<ImageView-->
+        <!--android:layout_width="89dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--android:background="@color/hintColor"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@drawable/icon_add"/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:text="未上传"-->
+        <!--android:textColor="@color/hintColor"-->
+        <!--android:textSize="@dimen/tip_font_size"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_21"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/ll_11"-->
+        <!--android:layout_marginRight="40dp"-->
+        <!--android:orientation="vertical">-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="本人持身份证照"-->
+        <!--android:textColor="@color/commonColor"-->
+        <!--android:textSize="@dimen/tip_font_size"/>-->
+        <!--<ImageView-->
+        <!--android:layout_width="89dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--android:background="@color/hintColor"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@drawable/icon_add"/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:text="未上传"-->
+        <!--android:textColor="@color/hintColor"-->
+        <!--android:textSize="@dimen/tip_font_size"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_22"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/ll_11"-->
+        <!--android:layout_toRightOf="@id/ll_21"-->
+        <!--android:orientation="vertical">-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="本人正面照"-->
+        <!--android:textColor="@color/commonColor"-->
+        <!--android:textSize="@dimen/tip_font_size"/>-->
+        <!--<ImageView-->
+        <!--android:layout_width="89dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--android:background="@color/hintColor"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@drawable/icon_add"/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:text="未上传"-->
+        <!--android:textColor="@color/hintColor"-->
+        <!--android:textSize="@dimen/tip_font_size"/>-->
+        <!--</LinearLayout>-->
+        <!--</RelativeLayout>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_com"
+            android:layout_marginTop="20dp"
+            android:text="上传的证件照片文字等细节需清晰"
+            android:textColor="@color/colorMain"
+            android:textSize="@dimen/common_font_size"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="@dimen/button_w"
+            android:layout_height="@dimen/input_h"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:background="@color/colorMain"
+            android:text="提交认证"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/loading_layout"/>
+
+
+</FrameLayout>
