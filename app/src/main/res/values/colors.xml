@@ -62,4 +62,11 @@
     <color name="colorRole2">#FC7E58</color>
     <color name="colorRole3">#F19926</color>
     <color name="colorRole4">#854DEC</color>
+
+    <color name="colorHome1">#FB6821</color>
+    <color name="colorHome2">#5DCB42</color>
+    <color name="colorHome3">#3EA7F0</color>
+
+    <color name="colorHome4">#747CE4</color>
+    <color name="colorHome5">#63BD22</color>
 </resources>

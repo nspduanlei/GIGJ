@@ -1,11 +1,13 @@
 package com.app.gigj.views.fragments;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.GridView;
 
 import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
 import com.app.gigj.domin.entities.MenuEntity;
+import com.app.gigj.views.activities.shipper.AuthCenterActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
 import com.app.gigj.views.widget.listView.CommonAdapter;
 import com.app.gigj.views.widget.listView.MyViewHolder;
@@ -13,6 +15,7 @@ import com.app.gigj.views.widget.listView.MyViewHolder;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * Created by duanlei on 2016/12/29.
@@ -20,7 +23,7 @@ import butterknife.BindView;
 
 public class HomeFragment extends BaseFragment {
 
-    @BindView(R.id.gv_ids)
+    @BindView(R.id.gv_buttons)
     GridView mGvIds;
 
     ArrayList<MenuEntity> mMenuEntities;
@@ -62,5 +65,17 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected void initPresenter() {
 
+    }
+
+    @OnClick(R.id.btn_my_safe)
+    void onMySafeClicked(View view) {
+
+
+    }
+
+    @OnClick(R.id.btn_auth_center)
+    void onAuthCenterClicked(View view) {
+        Intent intent = new Intent(getActivity(), AuthCenterActivity.class);
+        startActivity(intent);
     }
 }

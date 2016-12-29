@@ -41,14 +41,19 @@ public class GuideActivity extends BaseActivity {
 
     @Override
     protected void initUi(Bundle savedInstanceState) {
+        //隐藏状态栏 和 导航栏
+        View decorView = getWindow().getDecorView();
+        int option = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(option);
+
         mLocalImages = new ArrayList<>();
-        mLocalImages.add(R.drawable.guide1);
-        mLocalImages.add(R.drawable.guide2);
-        mLocalImages.add(R.drawable.guide3);
-        mLocalImages.add(R.drawable.guide4);
+        mLocalImages.add(R.drawable.drawable_guide1);
+        mLocalImages.add(R.drawable.drawable_guide2);
+        mLocalImages.add(R.drawable.drawable_guide3);
+        mLocalImages.add(R.drawable.drawable_guide4);
         initBanner();
     }
-
 
     private void initBanner() {
         mConvenientBanner.setPages(

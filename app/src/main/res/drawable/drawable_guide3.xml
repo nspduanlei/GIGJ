@@ -7,7 +7,7 @@
         </shape>
     </item>
 
-    <item android:bottom="48dp">
+    <item>
         <bitmap
             android:gravity="center"
             android:src="@drawable/guide3" />

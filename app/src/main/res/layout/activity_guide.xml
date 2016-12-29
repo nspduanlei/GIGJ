@@ -15,9 +15,12 @@
     <Button
         android:id="@+id/btn_start"
         android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/button_bg_1"/>
+        android:layout_height="@dimen/input_h"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/button_bg_1"
+        android:text="立即体验"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone"/>
 
 </FrameLayout>

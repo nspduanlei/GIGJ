@@ -56,7 +56,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void setUpContentView() {
-        setContentView(R.layout.activity_main, -1, MODE_NONE);
+        setContentView(R.layout.activity_main, R.string.title_home);
     }
 
     @Override
