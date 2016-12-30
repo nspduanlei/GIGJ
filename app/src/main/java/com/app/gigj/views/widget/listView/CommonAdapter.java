@@ -4,8 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
     private OnItemClickListener mOnItemClickListener;
 
     public interface OnItemClickListener<T> {
-        void onItemClick(T data);
+        void onItemClick(T data, int position);
     }
 
     public void setOnItemClickListener(OnItemClickListener<T> onItemClickListener) {
@@ -31,7 +31,7 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
     }
 
 
-    public CommonAdapter(Context context, List<T> datas, int layoutId, ListView listView) {
+    public CommonAdapter(Context context, List<T> datas, int layoutId, AbsListView listView) {
         mContext = context;
         mData = datas;
         mInflater = LayoutInflater.from(context);
@@ -39,7 +39,7 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
             if (mOnItemClickListener != null) {
-                mOnItemClickListener.onItemClick(mData.get(position));
+                mOnItemClickListener.onItemClick(mData.get(position), position);
             }
         });
     }

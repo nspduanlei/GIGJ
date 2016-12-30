@@ -15,6 +15,7 @@ import com.app.gigj.views.fragments.MessageFragment;
 import com.app.gigj.views.fragments.OrderFragment;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
+import com.flyco.tablayout.listener.OnTabSelectListener;
 
 import java.util.ArrayList;
 
@@ -56,7 +57,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void setUpContentView() {
-        setContentView(R.layout.activity_main, R.string.title_home);
+        setContentView(R.layout.activity_main, R.string.title_home, MODE_HOME);
     }
 
     @Override
@@ -108,30 +109,37 @@ public class MainActivity extends BaseActivity {
 
         mTlMain.setTabData(mTabEntities, this, R.id.fl_content, mFragments);
 
-//        mTlMain.setOnTabSelectListener(new OnTabSelectListener() {
-//            @Override
-//            public void onTabSelect(int position) {
-//
-//                switch (position) {
-//                    case 0:
-//                        setUpTitle(R.string.custom_title);
-//                        setBtnImage(R.drawable.nav_add_drawable, MainActivity.this);
-//                        break;
-//                    case 1:
-//                        setUpTitle(R.string.work_place_title);
-//                        hideBtnImage();
-//                        break;
-//                    case 2:
-//                        setUpTitle(R.string.profile_title);
-//                        hideBtnImage();
-//                        break;
-//                }
-//            }
-//
-//            @Override
-//            public void onTabReselect(int position) {
-//            }
-//        });
+        mTlMain.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelect(int position) {
+
+                switch (position) {
+                    case 0:  //首页
+                        setUpTitle(R.string.title_home);
+                        setMenuText("设置", v -> {
+
+                        });
+                        break;
+                    case 1: //关于
+                        setUpTitle(R.string.title_about);
+
+                        break;
+                    case 2: //消息
+                        setUpTitle(R.string.title_msg);
+
+                        break;
+
+                    case 3: //我的
+                        setUpTitle(R.string.title_me);
+
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabReselect(int position) {
+            }
+        });
     }
 
     @Override

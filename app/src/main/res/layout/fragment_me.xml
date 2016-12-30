@@ -1,14 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
-             android:layout_height="match_parent">
+             android:layout_height="match_parent"
+             android:background="@color/pageBgColor">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="我的"/>
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="20dp"
+                android:paddingLeft="@dimen/margin_com"
+                android:paddingRight="@dimen/margin_com"
+                android:paddingTop="20dp">
 
-    
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iv_head"
+                    android:text="duanlei"/>
+
+                <TextView
+                    android:id="@+id/tv_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_user_name"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/iv_head"
+                    android:background="#A388D5"
+                    android:text="  车主  "
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_msg_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_user_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/tv_msg"
+                    android:background="@color/colorRole2"
+                    android:text="  司机  "
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_msg_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_user_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toRightOf="@id/tv_msg_1"
+                    android:background="@color/colorRole1"
+                    android:text="  货主  "
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"/>
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_info"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/tv_msg"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:layout_toRightOf="@id/iv_head"-->
+                <!--android:text="发货:0  订单:0"-->
+                <!--android:textColor="@color/commonColor"-->
+                <!--android:textSize="11sp"/>-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_right"/>
+            </RelativeLayout>
+
+            <com.app.gigj.views.widget.NoScrollGridView
+                android:id="@+id/gv_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:numColumns="4"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:verticalSpacing="5dp"/>
+
+            <com.app.gigj.views.widget.NoScrollListView
+                android:id="@+id/lv_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:divider="@color/pageBgColor"
+                android:dividerHeight="4dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
     <include
         layout="@layout/loading_layout"/>
 

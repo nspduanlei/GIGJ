@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_h"
+                android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_com"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/icon_me_lv1"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_image"
+        android:text="我的钱包"
+        android:textColor="@color/commonColor"/>
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_com"
+        android:src="@drawable/arrow_right"/>
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/iv_arrow"
+        android:text="查看"
+        android:textColor="@color/titleColor"/>
+
+    <Switch
+        android:id="@+id/switch_work"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:switchMinWidth="50dp"
+        android:textOff=""
+        android:textOn=""
+        android:thumb="@drawable/button_bg_switch"
+        android:thumbTextPadding="15dp"
+        android:track="@drawable/switch_track_selector"/>
+
+</RelativeLayout>

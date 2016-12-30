@@ -41,6 +41,8 @@
     <dimen name="margin_top_com">8dp</dimen>
     <dimen name="input_h">42dp</dimen>
 
+    <dimen name="item_h">40dp</dimen>
+
     <dimen name="button_w">200dp</dimen>
 
 </resources>

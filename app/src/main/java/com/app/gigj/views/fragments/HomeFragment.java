@@ -7,6 +7,7 @@ import android.widget.GridView;
 import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
 import com.app.gigj.domin.entities.MenuEntity;
+import com.app.gigj.utils.T;
 import com.app.gigj.views.activities.shipper.AuthCenterActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
 import com.app.gigj.views.widget.listView.CommonAdapter;
@@ -24,33 +25,45 @@ import butterknife.OnClick;
 public class HomeFragment extends BaseFragment {
 
     @BindView(R.id.gv_buttons)
-    GridView mGvIds;
+    GridView mGvButtons;
 
-    ArrayList<MenuEntity> mMenuEntities;
 
     @Override
     protected void initUI(View view) {
+      initMenu();
+    }
 
-        mMenuEntities = new ArrayList<>();
-        mMenuEntities.add(new MenuEntity(R.drawable.btn_home1, "我的发货订单"));
-        mMenuEntities.add(new MenuEntity(R.drawable.btn_home2, "我的配送订单"));
-        mMenuEntities.add(new MenuEntity(R.drawable.btn_home3, "加油管理"));
-        mMenuEntities.add(new MenuEntity(R.drawable.btn_home4, "车辆维修管理"));
-        mMenuEntities.add(new MenuEntity(R.drawable.btn_home5, "新闻通知"));
-        mMenuEntities.add(new MenuEntity(R.drawable.btn_home6, "事故管理"));
+    private void initMenu() {
 
+        ArrayList<MenuEntity> menuEntities;
 
-        mGvIds.setAdapter(new CommonAdapter<MenuEntity>(getActivity(), mMenuEntities,
-                R.layout.item_home_button) {
+        menuEntities = new ArrayList<>();
+        menuEntities.add(new MenuEntity(R.drawable.btn_home1, "我的发货订单"));
+        menuEntities.add(new MenuEntity(R.drawable.btn_home2, "我的配送订单"));
+        menuEntities.add(new MenuEntity(R.drawable.btn_home3, "加油管理"));
+        menuEntities.add(new MenuEntity(R.drawable.btn_home4, "车辆维修管理"));
+        menuEntities.add(new MenuEntity(R.drawable.btn_home5, "新闻通知"));
+        menuEntities.add(new MenuEntity(R.drawable.btn_home6, "事故管理"));
+
+        CommonAdapter adapter = new CommonAdapter<MenuEntity>(getActivity(), menuEntities,
+                R.layout.item_home_button, mGvButtons) {
             @Override
             public void convert(MyViewHolder holder, MenuEntity menuEntity) {
                 holder.setText(R.id.tv_title, menuEntity.getName())
                         .setImageResource(R.id.iv_image, menuEntity.getResId());
             }
+        };
+
+        adapter.setOnItemClickListener((data, position) -> {
+
+            T.showShort(getActivity(), position+"");
+
         });
 
+        mGvButtons.setAdapter(adapter);
 
     }
+
 
     @Override
     protected int getFragmentLayout() {

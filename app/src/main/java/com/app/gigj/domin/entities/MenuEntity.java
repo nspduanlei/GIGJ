@@ -6,8 +6,15 @@ package com.app.gigj.domin.entities;
 public class MenuEntity {
     private int resId;
     private String name;
+    private int type;
 
     public MenuEntity(int resId, String name) {
+        this.resId = resId;
+        this.name = name;
+    }
+
+    public MenuEntity(int resId, String name, int type) {
+        this.type = type;
         this.resId = resId;
         this.name = name;
     }
@@ -26,5 +33,13 @@ public class MenuEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 }

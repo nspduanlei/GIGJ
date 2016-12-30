@@ -22,4 +22,8 @@
     <string name="title_auth_center">认证中心</string>
     <string name="auth_hint_1">您所上传的所以信息都将只用于核实您的身份，不不会向任何第三方泄漏，放心上传，认证后将享有更多权限。</string>
     <string name="title_home">首页</string>
+    <string name="title_about_us">关于我们</string>
+    <string name="title_about">关于</string>
+    <string name="title_msg">消息</string>
+    <string name="title_me">我的账号</string>
 </resources>

@@ -10,6 +10,7 @@ buildscript {
         classpath 'me.tatarka:gradle-retrolambda:3.2.5'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         classpath "com.android.databinding:dataBinder:1.0-rc4"
+
         classpath 'com.antfortune.freeline:gradle:0.8.4'
     }
 }
@@ -20,7 +21,8 @@ allprojects {
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.4'
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
+
 

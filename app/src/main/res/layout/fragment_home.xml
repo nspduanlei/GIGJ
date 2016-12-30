@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                android:src="@drawable/img_home_top" />
+                android:src="@drawable/img_home_top"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/icon_home_top1" />
+                        android:src="@drawable/icon_home_top1"/>
 
                     <TextView
                         android:id="@+id/tv_title_1"
@@ -46,7 +46,7 @@
                         android:layout_toRightOf="@id/iv_icon_1"
                         android:text="保险的期日"
                         android:textColor="@color/titleColor"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"/>
 
                     <TextView
                         android:layout_width="50dp"
@@ -56,7 +56,7 @@
                         android:gravity="center"
                         android:text="180天"
                         android:textColor="@color/colorHome1"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -71,7 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/icon_home_top2" />
+                        android:src="@drawable/icon_home_top2"/>
 
                     <TextView
                         android:id="@+id/tv_title_2"
@@ -80,7 +80,7 @@
                         android:layout_toRightOf="@id/iv_icon_2"
                         android:text="距下次保养"
                         android:textColor="@color/titleColor"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"/>
 
                     <TextView
                         android:layout_width="50dp"
@@ -90,7 +90,7 @@
                         android:gravity="center"
                         android:text="180天"
                         android:textColor="@color/colorHome2"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -106,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/icon_home_top3" />
+                        android:src="@drawable/icon_home_top3"/>
 
                     <TextView
                         android:id="@+id/tv_title_3"
@@ -115,7 +115,7 @@
                         android:layout_toRightOf="@id/iv_icon_3"
                         android:text="距下次年审"
                         android:textColor="@color/titleColor"
-                        android:textSize="10sp" />
+                        android:textSize="10sp"/>
 
                     <TextView
                         android:layout_width="50dp"
@@ -125,22 +125,26 @@
                         android:gravity="center"
                         android:text="180天"
                         android:textColor="@color/colorHome3"
-                        android:textSize="11sp" />
+                        android:textSize="11sp"/>
                 </RelativeLayout>
             </LinearLayout>
+
+            <include
+                layout="@layout/layout_line"/>
 
             <com.app.gigj.views.widget.NoScrollGridView
                 android:id="@+id/gv_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:numColumns="2"
-                android:verticalSpacing="20dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:numColumns="3"
+                android:verticalSpacing="20dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
                 android:layout_marginTop="30dp">
 
                 <Button
@@ -152,7 +156,7 @@
                     android:drawableLeft="@drawable/icon_home_bot1"
                     android:paddingLeft="10dp"
                     android:text=" 我的保单  "
-                    android:textColor="@color/colorWhite" />
+                    android:textColor="@color/colorWhite"/>
 
                 <Button
                     android:id="@+id/btn_auth_center"
@@ -162,11 +166,11 @@
                     android:drawableLeft="@drawable/icon_home_bot2"
                     android:paddingLeft="10dp"
                     android:text=" 认证中心  "
-                    android:textColor="@color/colorWhite" />
-
+                    android:textColor="@color/colorWhite"/>
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
-    <include layout="@layout/loading_layout" />
+    <include layout="@layout/loading_layout"/>
 </FrameLayout>
