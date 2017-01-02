@@ -6,8 +6,11 @@ package com.app.gigj.config;
 
 public class Constants {
 
-    public static final String TEST_BASE_URL = "http://192.168.7.21:18001/";
 
+    public static String BASE_URL = "http://www.glgj.com.cn:5080/AppWs/";
+
+    public static String USER_ID = "10000004";
+    public static String PASSWORD = "111";
     /**
      * 列表每页显示数据
      */

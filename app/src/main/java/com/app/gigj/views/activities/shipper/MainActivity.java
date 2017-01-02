@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 
 import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
-import com.app.gigj.domin.entities.TabEntity;
+import com.app.gigj.domin.entities.func.TabEntity;
 import com.app.gigj.support.eventBus.RxBus;
 import com.app.gigj.utils.MyUtils;
 import com.app.gigj.views.activities.core.BaseActivity;

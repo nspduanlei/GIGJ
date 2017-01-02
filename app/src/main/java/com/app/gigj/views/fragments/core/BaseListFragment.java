@@ -77,7 +77,6 @@ public abstract class BaseListFragment extends Fragment {
     protected abstract void loadFirstPage();
     protected abstract void loadOtherPage();
 
-
     /**
      * 隐藏头部
      */
@@ -98,9 +97,6 @@ public abstract class BaseListFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mSwipeRefreshLayout.setColorSchemeResources(R.color.swipe_color_1, R.color.swipe_color_2,
-                R.color.swipe_color_3, R.color.swipe_color_4);
-
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.addOnScrollListener(mOnScrollListener);
 
@@ -110,10 +106,15 @@ public abstract class BaseListFragment extends Fragment {
         initiateRefresh();
 
         if (mIsRefresh) {
+            mSwipeRefreshLayout.setColorSchemeResources(R.color.swipe_color_1, R.color.swipe_color_2,
+                    R.color.swipe_color_3, R.color.swipe_color_4);
+
             mSwipeRefreshLayout.setOnRefreshListener(() -> {
                 Log.i(LOG_TAG, "onRefresh called from SwipeRefreshLayout");
                 initiateRefresh();
             });
+        } else {
+            mSwipeRefreshLayout.setEnabled(false);
         }
     }
 

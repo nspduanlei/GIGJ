@@ -7,7 +7,7 @@ public interface Api {
 //     * 登录
 //     */
 //    @POST("login-service/doLogin.apec")
-//    Observable<Result<User>> login(@Body RequestBody body);
+//    Observable<Result<User>> login(@Body GetAreaRequestBody body);
 
 
 

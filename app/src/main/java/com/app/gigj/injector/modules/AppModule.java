@@ -2,8 +2,9 @@ package com.app.gigj.injector.modules;
 
 
 import com.app.gigj.app.MyApplication;
+import com.app.gigj.domin.model.request.core.RequestEnvelope;
 import com.app.gigj.domin.repository.Repository;
-import com.app.gigj.support.rest.RestDataSource;
+import com.app.gigj.support.wsdl.WsdlDataSource;
 import com.google.gson.Gson;
 
 import javax.inject.Named;
@@ -35,8 +36,8 @@ public class AppModule {
 
     @Provides
     @Singleton
-    Repository provideGoodsRepository() {
-        return new RestDataSource(mMyApplication);
+    Repository provideRepository() {
+        return new WsdlDataSource(mMyApplication);
     }
 
     @Provides @Named("executor_thread")
@@ -53,4 +54,14 @@ public class AppModule {
     Gson provideGson() {
         return new Gson();
     }
+
+//    RequestEnvelope requestEnvelope = new RequestEnvelope();    //soapenv:Envelope
+//    RequestBody requestBody = new RequestBody();    // body
+//    GetConnection baseRequest = new GetConnection();    // getroleinfo
+
+    @Provides
+    RequestEnvelope provideRequestEnvelope() {
+        return new RequestEnvelope();
+    }
+
 }

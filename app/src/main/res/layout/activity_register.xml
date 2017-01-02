@@ -46,7 +46,8 @@
             <EditText
                 android:id="@+id/et_pw"
                 style="@style/InputET"
-                android:hint="请输入密码"/>
+                android:hint="请输入密码"
+                android:inputType="numberPassword"/>
         </LinearLayout>
 
         <LinearLayout
@@ -69,6 +70,7 @@
         <!--注册地址-->
         <LinearLayout
             style="@style/InputLLStyle">
+
             <TextView
                 style="@style/InputTvStyle"
                 android:drawableLeft="@drawable/icon_location"
@@ -77,11 +79,42 @@
             <View
                 style="@style/InputLine"/>
 
-            <TextView
-                android:id="@+id/tv_address"
-                style="@style/InputET"
-                android:gravity="center_vertical"
-                android:hint="省/市"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_province"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:hint="省"
+                    android:drawableRight="@drawable/arrow_down"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/titleColor"
+                    android:textColorHint="@color/hintColor"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/titleColor"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:hint="市"
+                    android:drawableRight="@drawable/arrow_down"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/titleColor"
+                    android:textColorHint="@color/hintColor"/>
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
@@ -95,15 +128,22 @@
             <View
                 style="@style/InputLine"/>
 
-            <EditText
-                android:id="@+id/et_company"
+            <TextView
+                android:id="@+id/tv_company"
                 style="@style/InputET"
-                android:hint="请输入公司名"/>
+                android:hint="请输入公司名"
+                android:drawableRight="@drawable/arrow_down"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:textColor="@color/titleColor"
+                android:textColorHint="@color/hintColor"/>
         </LinearLayout>
 
         <!--验证码-->
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <LinearLayout
                 style="@style/InputLLStyle"
                 android:layout_width="0dp"
@@ -112,7 +152,7 @@
                 <TextView
                     style="@style/InputTvStyle"
                     android:drawableLeft="@drawable/icon_code"
-                    android:text=" 验 证 吗  "/>
+                    android:text=" 验 证 码  "/>
 
                 <View
                     style="@style/InputLine"/>
@@ -129,12 +169,11 @@
                 android:layout_height="@dimen/input_h"
                 android:layout_marginLeft="@dimen/margin_top_com"
                 android:layout_marginTop="@dimen/margin_top_com"
-                android:background="@color/colorMain"
+                android:background="@drawable/button_bg_send_code"
                 android:text="获取验证码"
                 android:textColor="@color/colorWhite"
                 android:textSize="13sp"/>
         </LinearLayout>
-
 
         <Button
             android:id="@+id/btn_submit"
@@ -144,9 +183,7 @@
             android:background="@color/colorMain"
             android:text="注  册"
             android:textColor="@color/colorWhite"/>
-
     </LinearLayout>
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -156,7 +193,6 @@
         android:text="客服： 400-800-0000"
         android:textColor="@color/titleColor"
         android:textSize="@dimen/title_font_size"/>
-
 
     <include
         layout="@layout/loading_layout"/>

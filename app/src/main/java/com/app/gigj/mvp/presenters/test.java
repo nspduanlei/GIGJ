@@ -5,4 +5,5 @@ package com.app.gigj.mvp.presenters;
  */
 
 public class test {
+    //{"state":"false","error":"没有找到用户"}
 }
