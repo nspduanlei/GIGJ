@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.app.gigj.R;
 import com.app.gigj.config.ErrorCode;
-import com.app.gigj.domin.entities.MenuEntity;
+import com.app.gigj.domin.entities.func.MenuEntity;
 import com.app.gigj.views.activities.LoginActivity;
 import com.app.gigj.views.widget.listView.CommonAdapter;
 import com.app.gigj.views.widget.listView.MyViewHolder;
@@ -23,42 +23,7 @@ import rx.Subscription;
 /**
  * Created by duanlei on 2016/10/13.
  */
-
 public class MyUtils {
-
-    /**
-     * 客户头像生成随机颜色
-     */
-    private static String[] mRandomColor = {"#30c6fe", "#2ee0da", "#c3ae81", "#caa6ff", "#ff80cb",
-            "#ffbd49", "#ff6d8c", "#30c6fe", "#2ee0da", "#c3ae81"};
-
-    public static int getRandomColor() {
-        return Color.parseColor(mRandomColor[(int) (Math.random() * 10) % mRandomColor.length]);
-    }
-
-    public static int getColor(String icon) {
-        int i;
-        if (StringUtils.isNullOrEmpty(icon)) {
-            i = 0;
-            return Color.parseColor(mRandomColor[i]);
-        } else {
-            i = Integer.valueOf(icon);
-            return Color.parseColor(mRandomColor[i - 1]);
-        }
-    }
-
-    /**
-     * 设置用户名头像
-     */
-    public static void setHeadText(TextView textView, String icon) {
-        if (icon.length() <= 2) {
-            textView.setText(icon);
-        } else {
-            textView.setText(icon.substring(0, 2));
-        }
-    }
-
-
 
     public static void showListDialog(Context context,
                                       ArrayList<MenuEntity> selectContents,

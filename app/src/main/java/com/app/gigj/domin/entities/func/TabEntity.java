@@ -1,4 +1,4 @@
-package com.app.gigj.domin.entities;
+package com.app.gigj.domin.entities.func;
 
 import com.flyco.tablayout.listener.CustomTabEntity;
 

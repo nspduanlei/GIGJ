@@ -2,6 +2,7 @@ package com.app.gigj.injector.components;
 
 
 import com.app.gigj.app.MyApplication;
+import com.app.gigj.domin.model.request.core.RequestEnvelope;
 import com.app.gigj.domin.repository.Repository;
 import com.app.gigj.injector.modules.AppModule;
 import com.google.gson.Gson;
@@ -23,6 +24,8 @@ public interface AppComponent {
 
     Repository goodsRepository();
 
+    RequestEnvelope requestEnvelope();
+
     @Named("ui_thread")
     Scheduler uiThread();
 
@@ -31,4 +34,5 @@ public interface AppComponent {
 
     @Named("gson")
     Gson gson();
+
 }

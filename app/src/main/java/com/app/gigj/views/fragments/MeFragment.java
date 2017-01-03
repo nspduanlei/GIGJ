@@ -6,7 +6,7 @@ import android.widget.ListView;
 
 import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
-import com.app.gigj.domin.entities.MenuEntity;
+import com.app.gigj.domin.entities.func.MenuEntity;
 import com.app.gigj.utils.T;
 import com.app.gigj.views.fragments.core.BaseFragment;
 import com.app.gigj.views.widget.listView.CommonAdapter;

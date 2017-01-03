@@ -1,4 +1,4 @@
-package com.app.gigj.domin.entities;
+package com.app.gigj.domin.entities.func;
 
 /**
  * Created by duanlei on 16/9/13.
