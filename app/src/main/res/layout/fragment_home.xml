@@ -19,6 +19,7 @@
                 android:src="@drawable/img_home_top"/>
 
             <LinearLayout
+                android:id="@+id/ll_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"

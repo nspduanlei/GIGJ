@@ -3,11 +3,14 @@ package com.app.gigj.views.fragments;
 import android.content.Intent;
 import android.view.View;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 
 import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
 import com.app.gigj.domin.entities.func.MenuEntity;
+import com.app.gigj.utils.SPUtils;
 import com.app.gigj.utils.T;
+import com.app.gigj.views.activities.driver.GasolineManageActivity;
 import com.app.gigj.views.activities.shipper.AuthCenterActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
 import com.app.gigj.views.widget.listView.CommonAdapter;
@@ -26,17 +29,22 @@ public class HomeFragment extends BaseFragment {
 
     @BindView(R.id.gv_buttons)
     GridView mGvButtons;
-
+    @BindView(R.id.ll_top)
+    LinearLayout mLlTop;
 
     @Override
     protected void initUI(View view) {
-      initMenu();
+        initMenu();
+
+        String role = (String) SPUtils.get(getActivity(), SPUtils.USER_ROLE, "");
+        if (role.charAt(2) == '1' || role.charAt(4) == '1') {
+            //车主或司机隐藏view
+            mLlTop.setVisibility(View.GONE);
+        }
     }
 
     private void initMenu() {
-
         ArrayList<MenuEntity> menuEntities;
-
         menuEntities = new ArrayList<>();
         menuEntities.add(new MenuEntity(R.drawable.btn_home1, "我的发货订单"));
         menuEntities.add(new MenuEntity(R.drawable.btn_home2, "我的配送订单"));
@@ -55,15 +63,30 @@ public class HomeFragment extends BaseFragment {
         };
 
         adapter.setOnItemClickListener((data, position) -> {
+            T.showShort(getActivity(), position + "");
+            switch (position) {
 
-            T.showShort(getActivity(), position+"");
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    Intent intent = new Intent(getActivity(), GasolineManageActivity.class);
+                    startActivity(intent);
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+            }
+
 
         });
 
         mGvButtons.setAdapter(adapter);
-
     }
-
 
     @Override
     protected int getFragmentLayout() {

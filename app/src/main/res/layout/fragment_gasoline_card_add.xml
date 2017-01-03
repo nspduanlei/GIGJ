@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/pageBgColor"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:paddingBottom="5dp"
+        android:paddingLeft="50dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="选择加油卡"
+            android:textColor="@color/titleColor"
+            android:textSize="12sp"/>
+
+        <include
+            android:id="@+id/card_l"
+            layout="@layout/layout_gasoline_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginRight="50dp"/>
+
+        <include
+            android:id="@+id/card_r"
+            layout="@layout/layout_gasoline_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_toRightOf="@id/card_l"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:paddingBottom="5dp"
+        android:paddingLeft="50dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_title_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="填写充值金额"
+            android:textColor="@color/titleColor"
+            android:textSize="12dp"/>
+
+        <EditText
+            android:id="@+id/et_pay"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/input_frame_bg"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/et_pay"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/et_pay"
+            android:text="元"
+            android:textColor="@color/titleColor"
+            android:textSize="10sp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

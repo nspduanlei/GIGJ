@@ -1,9 +1,6 @@
 package com.app.gigj.utils;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -26,7 +23,7 @@ public class MD5Util {
 //        return new String(md5(userId + "($_$)Glgj($_$)"));
 //    }
 //
-//    public static String getPassword(String password) {
+//    public static String getMd5Password(String password) {
 //        return new String(md5(password + "$$ht_zx$$"));
 //    }
 //
@@ -80,7 +77,7 @@ public class MD5Util {
         return md5(userId + "($_$)Glgj($_$)");
     }
 
-    public static String getPassword(String password) {
+    public static String getMd5Password(String password) {
         return md5(password + "$$ht_zx$$");
     }
 }

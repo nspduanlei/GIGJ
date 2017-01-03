@@ -59,7 +59,7 @@ public class AppSelectUseCase extends UseCase<AppSelectResponseEnvelope> {
         GetArea baseRequest = new GetArea();
 
         baseRequest.setUserIdMd5(MD5Util.getMd5UserId(Constants.USER_ID));
-        baseRequest.setPasswordMd5(MD5Util.getPassword(Constants.PASSWORD));
+        baseRequest.setPasswordMd5(MD5Util.getMd5Password(Constants.PASSWORD));
         //baseRequest.setUserIdMd5("fa5023fc97cd4589");
         //baseRequest.setPasswordMd5("d8f3e71549e3d7f1");
         baseRequest.setUserId(Constants.USER_ID);

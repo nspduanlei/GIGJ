@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/TextInfoStyle"
+        android:text="加油时间：2015-05-12"/>
+
+    <TextView
+        android:id="@+id/tv_num"
+        style="@style/TextInfoStyle"
+        android:layout_toRightOf="@id/tv_time"
+        android:text="加油数量：30L"/>
+
+    <TextView
+        android:id="@+id/tv_city"
+        style="@style/TextInfoStyle"
+        android:layout_below="@id/tv_time"
+        android:text="加油地点：辽宁"/>
+
+    <TextView
+        android:id="@+id/tv_pay"
+        style="@style/TextInfoStyle"
+        android:layout_below="@id/tv_time"
+        android:layout_toRightOf="@id/tv_time"
+        android:text="总计费用：500元"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_city"
+        android:layout_marginTop="8dp"
+        android:background="@color/lineColor"/>
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/tag_frame_bg"
+        android:padding="2dp"
+        android:text="未审核"
+        android:textColor="@color/hintColor"
+        android:textSize="10sp"/>
+
+    <Button
+        android:id="@+id/btn_action"
+        android:layout_width="50dp"
+        android:layout_height="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/line"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorMain"
+        android:text="修改订单"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/btn_action"
+        android:layout_marginTop="5dp"
+        android:background="@color/pageBgColor"/>
+
+
+</RelativeLayout>

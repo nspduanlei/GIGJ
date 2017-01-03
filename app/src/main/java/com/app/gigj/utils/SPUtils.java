@@ -28,6 +28,9 @@ public class SPUtils {
     //手机号
     public static final String PHONE = "user_phone";
 
+    //密码
+    public static final String PASSWORD = "user_password";
+
     //用户名
     public static final String USER_NAME = "user_name";
 
@@ -37,20 +40,29 @@ public class SPUtils {
     //用户登录token
     public static final String TOKEN = "token";
 
-    //职位名称
-    public static final String POSITION_NAME = "position_name";
-
-    //职位等级
-    public static final String POSITION_LEVEL = "position_level";
-
-    //部门名称
-    public static final String DEP_NAME = "dep_name";
-
     //用户头像
     public static final String USER_IMG = "user_img";
 
+    //公司id
+    public static final String COMPANY_ID = "company_id";
+
+
     //角色  货主 司机 车主 员工
+    /**
+     * 默认 普通用户为1000000000
+     标志位：1000000000
+     第一位为普通注册用户
+     第二位为1表示内部员工，内部员工又有角色区分，只有当这个为1的时候，使用内部app就需要获取角色，进行权限管理
+     第三位为1表示成员司机
+     第四位为1表示货主身份
+     第五位为1表示车主身份
+     后面的位数继续扩展，暂时保留
+     注意：一个人可以有多个身份，比如注册为司机时，就有可能是货主，同时也是车主身份
+     */
     public static final String USER_ROLE = "user_role";
+
+
+
     /**
      * =================================================================
      **/

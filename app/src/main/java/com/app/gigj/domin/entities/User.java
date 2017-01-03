@@ -15,7 +15,6 @@ public class User {
      * A05 : 1111110000
      * A06 : 10001
      */
-
     private String state;
     private String error;
     private String A01;

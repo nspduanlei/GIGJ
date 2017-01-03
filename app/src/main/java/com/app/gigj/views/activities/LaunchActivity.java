@@ -47,7 +47,7 @@ public class LaunchActivity extends BaseActivity {
             } else {
 
                 //如果没有登录去登录
-                if (StringUtils.isNullOrEmpty((String) SPUtils.get(this, SPUtils.TOKEN, ""))) {
+                if (StringUtils.isNullOrEmpty((String) SPUtils.get(this, SPUtils.USER_NO, ""))) {
                     Intent intent = new Intent(LaunchActivity.this, LoginActivity.class);
                     startActivity(intent);
                 } else {

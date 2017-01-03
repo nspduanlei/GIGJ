@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加油时间："
+                android:textColor="@color/titleColor"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_frame_bg"
+                android:hint="输入加油时间"
+                android:padding="2dp"
+                android:textColorHint="@color/hintColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加油地点："
+                android:textColor="@color/titleColor"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_frame_bg"
+                android:hint="输入加油地点"
+                android:padding="2dp"
+                android:textColorHint="@color/hintColor"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加油数量："
+                android:textColor="@color/titleColor"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_frame_bg"
+                android:hint="输入加油数量"
+                android:padding="2dp"
+                android:textColorHint="@color/hintColor"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加油数量："
+                android:textColor="@color/titleColor"/>
+
+            <RadioGroup
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:button="@drawable/button_bg_radio_1"
+                    android:text="柴油"
+                    android:textColor="@color/color_bg_radio_1"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:button="@drawable/button_bg_radio_1"
+                    android:text="93#汽油"
+                    android:textColor="@color/color_bg_radio_1"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:button="@drawable/button_bg_radio_1"
+                    android:text="97#汽油"
+                    android:textColor="@color/color_bg_radio_1"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_h"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorMain"
+            android:text="保存修改"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/loading_layout"/>
+
+</FrameLayout>

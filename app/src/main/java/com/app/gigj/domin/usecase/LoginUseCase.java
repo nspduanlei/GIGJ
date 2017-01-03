@@ -47,7 +47,7 @@ public class LoginUseCase extends UseCase<LoginResponseEnvelope> {
 
         login.setPhoneVer(MD5Util.getMd5UserId(phone));
         login.setPhone(phone);
-        login.setPasswordMd5(MD5Util.getPassword(password));
+        login.setPasswordMd5(MD5Util.getMd5Password(password));
         login.setApp("APP");
 
         requestBody.setLogin(login);

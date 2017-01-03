@@ -52,16 +52,16 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:button="@drawable/button_bg_radio_sex"
                     android:text=" 男"
-                    android:textColor="@color/titleColor"
-                    android:button="@drawable/button_bg_radio_sex" />
+                    android:textColor="@color/titleColor"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" 女"
-                    android:textColor="@color/titleColor"
+                    android:layout_marginLeft="20dp"
                     android:button="@drawable/button_bg_radio_sex"
-                android:layout_marginLeft="20dp"/>
+                    android:text=" 女"
+                    android:textColor="@color/titleColor"/>
             </RadioGroup>
         </LinearLayout>
 
