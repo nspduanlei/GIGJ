@@ -8,6 +8,7 @@ import android.widget.ListView;
 import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
 import com.app.gigj.domin.entities.func.MenuEntity;
+import com.app.gigj.utils.MyUtils;
 import com.app.gigj.utils.T;
 import com.app.gigj.views.activities.CarTeamActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
@@ -46,6 +47,7 @@ public class MeFragment extends BaseFragment {
         titles.add(new MenuEntity(R.drawable.icon_me_lv6, "地址管理", 1));
         titles.add(new MenuEntity(R.drawable.icon_me_lv7, "评价查看", 1));
         titles.add(new MenuEntity(R.drawable.icon_me_lv8, "关于我们", 1));
+        titles.add(new MenuEntity(R.drawable.icon_me_lv9, "退出", 1));
 
         CommonAdapter adapter = new CommonAdapter<MenuEntity>(getActivity(),
                 titles, R.layout.item_me_list, mLvMenu) {
@@ -97,6 +99,7 @@ public class MeFragment extends BaseFragment {
                 case 6:
                     break;
                 case 7:
+                    MyUtils.loginOut(getActivity());
                     break;
             }
         });

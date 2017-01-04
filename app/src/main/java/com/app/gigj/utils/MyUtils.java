@@ -1,10 +1,11 @@
 package com.app.gigj.utils;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.view.Gravity;
-import android.widget.TextView;
 
 import com.app.gigj.R;
 import com.app.gigj.config.ErrorCode;
@@ -84,5 +85,30 @@ public class MyUtils {
             activity.startActivity(intent);
             activity.finish();
         }
+    }
+
+    /**
+     * 退出登录
+     */
+    public static void loginOut(Activity context) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("退出登录");
+        builder.setMessage("确定退出登录？");
+
+        builder.setPositiveButton("确定", (dialog, which) -> {
+            dialog.dismiss();
+
+            SPUtils.clear(context);
+            SPUtils.put(context, SPUtils.IS_FIRST_LAUNCH, true);
+
+            Intent intent = new Intent(context, LoginActivity.class);
+            context.startActivity(intent);
+            context.finish();
+        });
+
+        builder.setNegativeButton("取消", (dialog, which) -> dialog.dismiss());
+        Dialog noticeDialog = builder.create();
+        noticeDialog.show();
     }
 }
