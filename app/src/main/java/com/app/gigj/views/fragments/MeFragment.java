@@ -99,6 +99,8 @@ public class MeFragment extends BaseFragment {
                 case 6:
                     break;
                 case 7:
+                    break;
+                case 8:
                     MyUtils.loginOut(getActivity());
                     break;
             }

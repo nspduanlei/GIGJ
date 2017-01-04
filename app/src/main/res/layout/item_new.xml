@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/iv_image"
             android:drawableLeft="@drawable/shape_text_left"
+            android:lines="1"
             android:text="发发嘎嘎啊哈哈哈哈哈哈哈哈哈哈"
             android:textColor="@color/titleColor"/>
 

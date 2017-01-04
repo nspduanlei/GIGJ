@@ -14,12 +14,13 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/input_h"
         android:layout_gravity="center_horizontal"
+        tl:tl_divider_width="0dp"
         tl:tl_indicator_color="@color/colorMain"
         tl:tl_indicator_height="1dp"
-        tl:tl_textAllCaps="true"
+        tl:tl_tab_padding="10dp"
+        tl:tl_textAllCaps="false"
         tl:tl_textSelectColor="@color/titleColor"
-        tl:tl_textUnselectColor="@color/titleColor"
-        tl:tl_textsize="14sp"/>
+        tl:tl_textUnselectColor="@color/titleColor"/>
     <include
         layout="@layout/layout_line"/>
 

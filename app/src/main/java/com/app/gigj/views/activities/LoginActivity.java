@@ -13,6 +13,7 @@ import com.app.gigj.injector.components.DaggerUserComponent;
 import com.app.gigj.injector.modules.ActivityModule;
 import com.app.gigj.mvp.presenters.LoginPresenter;
 import com.app.gigj.mvp.views.LoginView;
+import com.app.gigj.utils.ECUtil;
 import com.app.gigj.utils.MD5Util;
 import com.app.gigj.utils.SPUtils;
 import com.app.gigj.utils.StringUtils;
@@ -110,32 +111,32 @@ public class LoginActivity extends BaseActivity implements LoginView {
     public void onLoginSuccess(User user) {
         //T.showShort(this, "登录成功");
 
+        new ECUtil(this, () -> {
+            SPUtils.put(this, SPUtils.PHONE, MD5Util.getMd5UserId(mPhone));
+            SPUtils.put(this, SPUtils.PASSWORD, MD5Util.getMd5Password(mPassword));
 
+            SPUtils.put(this, SPUtils.USER_NO, user.getA01());
+            SPUtils.put(this, SPUtils.USER_NAME, user.getA02());
+            SPUtils.put(this, SPUtils.COMPANY_ID, user.getA06());
+            SPUtils.put(this, SPUtils.USER_IMG, user.getA04());
 
-        SPUtils.put(this, SPUtils.PHONE, MD5Util.getMd5UserId(mPhone));
-        SPUtils.put(this, SPUtils.PASSWORD, MD5Util.getMd5Password(mPassword));
+            String role = user.getA05();
+            SPUtils.put(this, SPUtils.USER_ROLE, role);
 
-        SPUtils.put(this, SPUtils.USER_NO, user.getA01());
-        SPUtils.put(this, SPUtils.USER_NAME, user.getA02());
-        SPUtils.put(this, SPUtils.COMPANY_ID, user.getA06());
-        SPUtils.put(this, SPUtils.USER_IMG, user.getA04());
-
-        String role = user.getA05();
-        SPUtils.put(this, SPUtils.USER_ROLE, role);
-
-        if (role.equals("1000000000")) {
-            //首次登录
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-
-        } else {
-            if (role.charAt(3) == '1') { //货主
+            if (role.equals("1000000000")) {
+                //首次登录
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
-            } else { //非货主
-                Intent intent = new Intent(this, MainCommonActivity.class);
-                startActivity(intent);
+
+            } else {
+                if (role.charAt(3) == '1') { //货主
+                    Intent intent = new Intent(this, MainActivity.class);
+                    startActivity(intent);
+                } else { //非货主
+                    Intent intent = new Intent(this, MainCommonActivity.class);
+                    startActivity(intent);
+                }
             }
-        }
+        }).signIn(mPhone, mPassword);
     }
 }

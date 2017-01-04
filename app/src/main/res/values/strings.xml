@@ -31,4 +31,5 @@
     <string name="list_empty">没有数据</string>
     <string name="title_g_manage">加油站</string>
     <string name="title_add_g">添加加油记录</string>
+    <string name="title_send_good">发布货源</string>
 </resources>

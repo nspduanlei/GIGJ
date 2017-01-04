@@ -1,5 +1,6 @@
 package com.app.gigj.views.activities.driver;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
@@ -25,6 +26,10 @@ public class GasolineManageActivity extends BaseTabActivity {
     @Override
     protected void initUi(Bundle savedInstanceState) {
         setUpTitle(R.string.title_g_manage);
+        setMenuText("添加记录", v -> {
+            Intent intent = new Intent(this, AddGasolineActivity.class);
+            startActivity(intent);
+        });
 
         mFragments.add(new GasolineRecordFragment());
         mFragments.add(new GasolineCardFragment());

@@ -15,6 +15,7 @@ import com.app.gigj.injector.components.DaggerUserComponent;
 import com.app.gigj.injector.modules.ActivityModule;
 import com.app.gigj.mvp.presenters.RegisterPresenter;
 import com.app.gigj.mvp.views.RegisterView;
+import com.app.gigj.utils.ECUtil;
 import com.app.gigj.utils.MyUtils;
 import com.app.gigj.utils.StringUtils;
 import com.app.gigj.utils.T;
@@ -57,6 +58,8 @@ public class RegisterActivity extends BaseActivity implements RegisterView {
     String mProvinceName, mCityName;
     int mCompanyCode;
 
+    String mUserName, mPassword;
+
     @Override
     protected void setUpContentView() {
         setContentView(R.layout.activity_register, R.string.title_register);
@@ -88,7 +91,16 @@ public class RegisterActivity extends BaseActivity implements RegisterView {
     @OnClick(R.id.btn_submit)
     void onSubmitClicked(View view) {
 
+        mUserName = mEtPhone.getText().toString().trim();
+        mPassword = mEtPw.getText().toString().trim();
+
         //TODO 注册环信
+        new ECUtil(this, new ECUtil.EcListener() {
+            @Override
+            public void onLoginSuccess() {
+                RegisterActivity.this.finish();
+            }
+        }).signUp(mUserName, mPassword);
 
     }
 

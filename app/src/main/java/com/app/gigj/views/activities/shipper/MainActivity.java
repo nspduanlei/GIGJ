@@ -9,10 +9,11 @@ import com.app.gigj.domin.entities.func.TabEntity;
 import com.app.gigj.support.eventBus.RxBus;
 import com.app.gigj.utils.MyUtils;
 import com.app.gigj.views.activities.core.BaseActivity;
+import com.app.gigj.views.fragments.AboutFragment;
 import com.app.gigj.views.fragments.HomeFragment;
 import com.app.gigj.views.fragments.MeFragment;
 import com.app.gigj.views.fragments.MessageFragment;
-import com.app.gigj.views.fragments.AboutFragment;
+import com.app.gigj.views.fragments.shipper.SendGoodFragment;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
@@ -30,7 +31,7 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.tl_main)
     CommonTabLayout mTlMain;
 
-    private String[] mTitles = {"首页", "关于", "", "沟通", "我的"};
+    private String[] mTitles = {"首页", "关于", "发布货源", "沟通", "我的"};
     private int[] mIconUnSelectIds = {
             R.mipmap.icon_home, R.mipmap.icon_order,
             R.mipmap.icon_home,
@@ -46,6 +47,7 @@ public class MainActivity extends BaseActivity {
     MessageFragment mMessageFragment;
     AboutFragment mAboutFragment;
     MeFragment mMeFragment;
+    SendGoodFragment mSendGoodFragment;
 
     Subscription mRxSubscription;
     public static final int ACTION_UPDATE_CUSTOMS = 1;
@@ -95,10 +97,11 @@ public class MainActivity extends BaseActivity {
         mMessageFragment = new MessageFragment();
         mAboutFragment = new AboutFragment();
         mMeFragment = new MeFragment();
+        mSendGoodFragment = new SendGoodFragment();
 
         mFragments.add(mHomeFragment);
         mFragments.add(mAboutFragment);
-        mFragments.add(new Fragment());
+        mFragments.add(mSendGoodFragment);
         mFragments.add(mMessageFragment);
         mFragments.add(mMeFragment);
 
@@ -124,12 +127,16 @@ public class MainActivity extends BaseActivity {
                         setUpTitle(R.string.title_about);
 
                         break;
-                    case 2: //消息
+                    case 2: //发布货源
+                        setUpTitle("发布货源");
+
+                        break;
+                    case 3: //消息
                         setUpTitle(R.string.title_msg);
 
                         break;
 
-                    case 3: //我的
+                    case 4: //我的
                         setUpTitle(R.string.title_me);
 
                         break;
@@ -162,4 +169,5 @@ public class MainActivity extends BaseActivity {
         super.onDestroy();
         MyUtils.cancelSubscribe(mRxSubscription);
     }
+
 }

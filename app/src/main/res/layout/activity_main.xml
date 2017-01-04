@@ -28,7 +28,7 @@
             android:orientation="vertical">
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1.5dp"
+                android:layout_height="1dp"
                 android:background="@color/colorMain"/>
 
             <com.flyco.tablayout.CommonTabLayout
@@ -44,6 +44,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_send_good"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -55,14 +56,14 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_public"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="2dp"
-                android:text="发布货源"
-                android:textColor="@color/colorWhite"
-                android:textSize="9sp"/>
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:text="发布货源"-->
+                <!--android:textColor="@color/colorWhite"-->
+                <!--android:textSize="9sp"/>-->
 
         </LinearLayout>
 

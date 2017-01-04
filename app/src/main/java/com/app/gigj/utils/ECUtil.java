@@ -22,8 +22,7 @@ public class ECUtil {
 
     private Activity mActivity;
 
-    public ECUtil(ProgressDialog progressDialog, Activity activity, EcListener ecListener) {
-        mDialog = progressDialog;
+    public ECUtil(Activity activity, EcListener ecListener) {
         mActivity = activity;
         mEcListener = ecListener;
     }
@@ -37,7 +36,7 @@ public class ECUtil {
     /**
      * 注册方法
      */
-    private void signUp(String username, String password) {
+    public void signUp(String username, String password) {
         // 注册是耗时过程，所以要显示一个dialog来提示下用户
         mDialog = new ProgressDialog(mActivity);
         mDialog.setMessage("注册中，请稍后...");
@@ -108,7 +107,7 @@ public class ECUtil {
     /**
      * 登录方法
      */
-    private void signIn(String username, String password) {
+    public void signIn(String username, String password) {
         mDialog = new ProgressDialog(mActivity);
         mDialog.setMessage("正在登陆，请稍后...");
         mDialog.show();
