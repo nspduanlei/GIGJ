@@ -164,9 +164,9 @@ public class MyViewHolder {
         return this;
     }
 
-    public MyViewHolder setTextBackground(int tv_order_pro, int order_pro_bg_1) {
-        TextView textView = getView(tv_order_pro);
-        textView.setBackgroundResource(order_pro_bg_1);
+    public MyViewHolder setBackground(int tv_order_pro, int order_pro_bg_1) {
+        View view = getView(tv_order_pro);
+        view.setBackgroundResource(order_pro_bg_1);
         return this;
     }
 

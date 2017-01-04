@@ -43,8 +43,8 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 //    public int getItemPosition(Object object) {
 //        if (object instanceof GasolineRecordFragment) {
 //            ((GasolineRecordFragment) object).updateData();
-//        } else if (object instanceof OrderFragment) {
-//            ((OrderFragment) object).updateData();
+//        } else if (object instanceof AboutFragment) {
+//            ((AboutFragment) object).updateData();
 //        }
 //        return super.getItemPosition(object);
 //    }

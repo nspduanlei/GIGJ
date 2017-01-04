@@ -1,5 +1,6 @@
 package com.app.gigj.views.fragments;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ListView;
@@ -8,6 +9,7 @@ import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
 import com.app.gigj.domin.entities.func.MenuEntity;
 import com.app.gigj.utils.T;
+import com.app.gigj.views.activities.CarTeamActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
 import com.app.gigj.views.widget.listView.CommonAdapter;
 import com.app.gigj.views.widget.listView.MyViewHolder;
@@ -76,10 +78,29 @@ public class MeFragment extends BaseFragment {
 
         adapter.setOnItemClickListener((data, position) -> {
             T.showShort(getActivity(), position+"");
+
+            switch (position) {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    Intent intent = new Intent(getActivity(), CarTeamActivity.class);
+                    startActivity(intent);
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+            }
         });
-
         mLvMenu.setAdapter(adapter);
-
     }
 
     private void initGv() {
@@ -99,7 +120,6 @@ public class MeFragment extends BaseFragment {
             public void convert(MyViewHolder holder, MenuEntity menuEntity) {
                 holder.setText(R.id.tv_title, menuEntity.getName())
                         .setImageResource(R.id.iv_image, menuEntity.getResId());
-
             }
         };
 

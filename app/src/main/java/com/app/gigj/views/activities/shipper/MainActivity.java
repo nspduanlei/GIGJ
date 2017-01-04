@@ -12,7 +12,7 @@ import com.app.gigj.views.activities.core.BaseActivity;
 import com.app.gigj.views.fragments.HomeFragment;
 import com.app.gigj.views.fragments.MeFragment;
 import com.app.gigj.views.fragments.MessageFragment;
-import com.app.gigj.views.fragments.OrderFragment;
+import com.app.gigj.views.fragments.AboutFragment;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
@@ -44,7 +44,7 @@ public class MainActivity extends BaseActivity {
 
     HomeFragment mHomeFragment;
     MessageFragment mMessageFragment;
-    OrderFragment mOrderFragment;
+    AboutFragment mAboutFragment;
     MeFragment mMeFragment;
 
     Subscription mRxSubscription;
@@ -93,11 +93,11 @@ public class MainActivity extends BaseActivity {
 
         mHomeFragment = new HomeFragment();
         mMessageFragment = new MessageFragment();
-        mOrderFragment = new OrderFragment();
+        mAboutFragment = new AboutFragment();
         mMeFragment = new MeFragment();
 
         mFragments.add(mHomeFragment);
-        mFragments.add(mOrderFragment);
+        mFragments.add(mAboutFragment);
         mFragments.add(new Fragment());
         mFragments.add(mMessageFragment);
         mFragments.add(mMeFragment);

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorMain"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_image"
+            android:drawableLeft="@drawable/shape_text_left"
+            android:text="发发嘎嘎啊哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="@color/titleColor"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/iv_image"
+            android:text="发发嘎嘎啊哈哈哈哈哈哈哈哈哈哈发发嘎嘎啊哈哈哈哈哈哈哈哈哈哈发发嘎嘎啊哈哈哈哈哈哈哈哈哈哈发发嘎嘎啊哈哈哈哈哈哈哈哈哈哈"
+            android:textColor="@color/titleColor"
+            android:textSize="9sp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_content"
+            android:layout_marginTop="20dp"
+            android:text="2016年9月20日"
+            android:textColor="@color/titleColor"/>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/layout_line"/>
+</LinearLayout>

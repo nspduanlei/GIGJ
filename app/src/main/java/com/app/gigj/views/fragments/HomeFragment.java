@@ -10,8 +10,10 @@ import com.app.gigj.app.MyApplication;
 import com.app.gigj.domin.entities.func.MenuEntity;
 import com.app.gigj.utils.SPUtils;
 import com.app.gigj.utils.T;
+import com.app.gigj.views.activities.NewsActivity;
 import com.app.gigj.views.activities.driver.GasolineManageActivity;
 import com.app.gigj.views.activities.shipper.AuthCenterActivity;
+import com.app.gigj.views.activities.shipper.OrdersActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
 import com.app.gigj.views.widget.listView.CommonAdapter;
 import com.app.gigj.views.widget.listView.MyViewHolder;
@@ -64,19 +66,23 @@ public class HomeFragment extends BaseFragment {
 
         adapter.setOnItemClickListener((data, position) -> {
             T.showShort(getActivity(), position + "");
+            Intent intent;
             switch (position) {
-
                 case 0:
+                    intent = new Intent(getActivity(), OrdersActivity.class);
+                    startActivity(intent);
                     break;
                 case 1:
                     break;
                 case 2:
-                    Intent intent = new Intent(getActivity(), GasolineManageActivity.class);
+                    intent = new Intent(getActivity(), GasolineManageActivity.class);
                     startActivity(intent);
                     break;
                 case 3:
                     break;
                 case 4:
+                    intent = new Intent(getActivity(), NewsActivity.class);
+                    startActivity(intent);
                     break;
                 case 5:
                     break;

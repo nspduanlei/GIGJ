@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import javax.inject.Inject;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -89,6 +88,8 @@ public class RegisterActivity extends BaseActivity implements RegisterView {
     @OnClick(R.id.btn_submit)
     void onSubmitClicked(View view) {
 
+        //TODO 注册环信
+
     }
 
     /**
@@ -106,7 +107,6 @@ public class RegisterActivity extends BaseActivity implements RegisterView {
         }
 
         mRegisterPresenter.sendCode(phone);
-
     }
 
     /**

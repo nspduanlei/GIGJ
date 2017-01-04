@@ -23,7 +23,7 @@ public abstract class BaseTabActivity extends BaseActivity {
     @BindView(R.id.vp_content)
     ViewPager mVpContent;
 
-    private ArrayList<Fragment> mFragments = new ArrayList<>();
+    private ArrayList<Fragment> mFragments;
     private String[] mTitles;
 
     private MyPagerAdapter mAdapter;
@@ -31,12 +31,11 @@ public abstract class BaseTabActivity extends BaseActivity {
     @Override
     protected void setUpContentView() {
         setContentView(R.layout.activity_g_manage);
-
     }
 
-    protected void initPage() {
-        setFragments(mFragments);
-        setTitles(mTitles);
+    protected void initPage(ArrayList<Fragment> fragments,String[] titles) {
+        setFragments(fragments);
+        setTitles(titles);
 
         mAdapter = new MyPagerAdapter(getSupportFragmentManager(), mFragments, mTitles);
         mVpContent.setAdapter(mAdapter);
@@ -56,8 +55,12 @@ public abstract class BaseTabActivity extends BaseActivity {
         });
     }
 
-    protected abstract void setFragments(ArrayList<Fragment> fragments);
-    protected abstract void setTitles(String[] titles);
+    protected void setFragments(ArrayList<Fragment> fragments) {
+        mFragments = fragments;
+    }
+    protected void setTitles(String[] titles) {
+        mTitles = titles;
+    }
 
 
 

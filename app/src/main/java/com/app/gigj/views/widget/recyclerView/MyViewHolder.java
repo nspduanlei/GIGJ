@@ -7,7 +7,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.app.gigj.domin.entities.func.MenuEntity;
 import com.app.gigj.support.picasso.ImageLoad;
+import com.app.gigj.views.widget.NoScrollGridView;
+import com.app.gigj.views.widget.listView.CommonAdapter;
 
 import butterknife.ButterKnife;
 
@@ -99,6 +102,11 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
         return this;
     }
 
+    public MyViewHolder setGridView(int viewId, CommonAdapter<MenuEntity> commonAdapter) {
+        NoScrollGridView gridView = getView(viewId);
+        gridView.setAdapter(commonAdapter);
+        return this;
+    }
 
 
 
