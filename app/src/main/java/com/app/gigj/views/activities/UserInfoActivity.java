@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
+import com.app.gigj.utils.SPUtils;
 import com.app.gigj.views.activities.core.BaseActivity;
 
 import butterknife.OnClick;
@@ -16,19 +17,31 @@ import butterknife.OnClick;
  */
 
 public class UserInfoActivity extends BaseActivity {
+
+    private String mUserId;
+    private boolean mIsShow = false;
+
     @Override
     protected void setUpContentView() {
         setContentView(R.layout.activity_user_info, R.string.title_user_info);
-//        setMenuText("修改密码", new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+
+        mUserId = (String) SPUtils.get(this, SPUtils.USER_NO, "");
+        if (!mUserId.equals("")) {
+            setMenuText("修改密码", v -> {
+
+            });
+
+            mIsShow = true;
+        }
     }
 
     @Override
     protected void initUi(Bundle savedInstanceState) {
+
+        if (mIsShow) {
+            //获取用户信息，填充
+
+        }
 
     }
 

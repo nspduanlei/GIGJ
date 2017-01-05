@@ -40,7 +40,6 @@ public class SelectAddressFragment extends BaseListFragment implements SelectAdd
     @Override
     protected CommonRecyclerAdapter getAdapter() {
         setIsRefresh(false);
-        hideHead();
         CommonRecyclerAdapter adapter = new CommonRecyclerAdapter<Address>(getActivity(),
                 R.layout.item_text_list,
                 new ArrayList<>()) {
@@ -79,6 +78,11 @@ public class SelectAddressFragment extends BaseListFragment implements SelectAdd
     @Override
     protected void loadOtherPage() {
         mSelectAddressPresenter.loadMore();
+    }
+
+    @Override
+    protected int getFragmentLayout() {
+        return R.layout.fragment_list;
     }
 
     @Override

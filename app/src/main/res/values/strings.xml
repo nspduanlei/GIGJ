@@ -32,4 +32,8 @@
     <string name="title_g_manage">加油站</string>
     <string name="title_add_g">添加加油记录</string>
     <string name="title_send_good">发布货源</string>
+    <string name="title_add_service">维修申请</string>
+    <string name="title_law_service">法律服务</string>
+    <string name="title_accident_mana">事故处理详情</string>
+    <string name="title_accident_add">添加事故</string>
 </resources>

@@ -11,24 +11,22 @@
 
     <com.flyco.tablayout.SlidingTabLayout
         android:id="@+id/tl_top"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/input_h"
         android:layout_gravity="center_horizontal"
+        android:background="@color/colorWhite"
         tl:tl_divider_width="0dp"
         tl:tl_indicator_color="@color/colorMain"
         tl:tl_indicator_height="1dp"
-        tl:tl_tab_padding="10dp"
+        tl:tl_tab_padding="0dp"
+        tl:tl_tab_space_equal="true"
         tl:tl_textAllCaps="false"
         tl:tl_textSelectColor="@color/titleColor"
         tl:tl_textUnselectColor="@color/titleColor"/>
     <include
         layout="@layout/layout_line"/>
-
-
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-
 </LinearLayout>

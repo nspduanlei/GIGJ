@@ -44,10 +44,11 @@ public abstract class BaseListFragment extends Fragment {
     @BindView(R.id.ll_empty)
     LinearLayout mEmptyView;
 
-    @BindView(R.id.tv_text_list)
-    TextView mListCount;
-    @BindView(R.id.line)
-    View mLine;
+//    @BindView(R.id.tv_text_list)
+//    TextView mListCount;
+
+//    @BindView(R.id.line)
+//    View mLine;
 
     private CommonRecyclerAdapter mListAdapter;
 
@@ -63,7 +64,8 @@ public abstract class BaseListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_list, container, false);
+        //View view = inflater.inflate(R.layout.fragment_list, container, false);
+        View view = inflater.inflate(getFragmentLayout(), container, false);
         ButterKnife.bind(this, view);
         MyApplication myApplication = (MyApplication) getActivity().getApplication();
         initDependencyInjector(myApplication);
@@ -76,14 +78,15 @@ public abstract class BaseListFragment extends Fragment {
     protected abstract void initPresenter();
     protected abstract void loadFirstPage();
     protected abstract void loadOtherPage();
+    protected abstract int getFragmentLayout();
 
     /**
      * 隐藏头部
      */
-    protected void hideHead() {
-        mListCount.setVisibility(View.GONE);
-        mLine.setVisibility(View.GONE);
-    }
+//    protected void hideHead() {
+//        mListCount.setVisibility(View.GONE);
+//        mLine.setVisibility(View.GONE);
+//    }
 
     /**
      * 设置是否启用下拉刷新
@@ -177,9 +180,9 @@ public abstract class BaseListFragment extends Fragment {
         loadOtherPage();
     }
 
-    protected void setListCount(String s) {
-        mListCount.setText(s);
-    }
+//    protected void setListCount(String s) {
+//        mListCount.setText(s);
+//    }
 
     protected void setEmptyText(String msg) {
         mEmptyDes.setText(msg);

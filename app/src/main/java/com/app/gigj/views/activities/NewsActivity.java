@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import com.app.gigj.app.MyApplication;
 import com.app.gigj.views.activities.core.BaseTabActivity;
 import com.app.gigj.views.fragments.NewsFragment;
+import com.flyco.tablayout.listener.OnTabSelectListener;
 
 import java.util.ArrayList;
 
@@ -38,5 +39,10 @@ public class NewsActivity extends BaseTabActivity {
     @Override
     protected void initPresenter() {
 
+    }
+
+    @Override
+    protected OnTabSelectListener getTabSelectListener() {
+        return null;
     }
 }

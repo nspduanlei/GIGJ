@@ -11,7 +11,9 @@ import com.app.gigj.domin.entities.func.MenuEntity;
 import com.app.gigj.utils.SPUtils;
 import com.app.gigj.utils.T;
 import com.app.gigj.views.activities.NewsActivity;
-import com.app.gigj.views.activities.driver.GasolineManageActivity;
+import com.app.gigj.views.activities.carOwner.AccidentManaActivity;
+import com.app.gigj.views.activities.carOwner.ServiceStateActivity;
+import com.app.gigj.views.activities.carOwner.GasolineManageActivity;
 import com.app.gigj.views.activities.shipper.AuthCenterActivity;
 import com.app.gigj.views.activities.shipper.OrdersActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
@@ -73,18 +75,25 @@ public class HomeFragment extends BaseFragment {
                     startActivity(intent);
                     break;
                 case 1:
+                    intent = new Intent(getActivity(), OrdersActivity.class);
+                    intent.putExtra(OrdersActivity.ARG_TYPE, 1);
+                    startActivity(intent);
                     break;
                 case 2:
                     intent = new Intent(getActivity(), GasolineManageActivity.class);
                     startActivity(intent);
                     break;
                 case 3:
+                    intent = new Intent(getActivity(), ServiceStateActivity.class);
+                    startActivity(intent);
                     break;
                 case 4:
                     intent = new Intent(getActivity(), NewsActivity.class);
                     startActivity(intent);
                     break;
                 case 5:
+                    intent = new Intent(getActivity(), AccidentManaActivity.class);
+                    startActivity(intent);
                     break;
             }
 

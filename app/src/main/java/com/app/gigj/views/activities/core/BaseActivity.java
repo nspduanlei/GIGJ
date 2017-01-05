@@ -148,6 +148,11 @@ public abstract class BaseActivity extends AppCompatActivity implements Toolbar.
         mMenuText.setOnClickListener(onClickListener);
     }
 
+    protected void hideMenuText() {
+        mMenuText.setVisibility(View.GONE);
+    }
+
+
     public void onResume() {
         super.onResume();
         MobclickAgent.onResume(this);

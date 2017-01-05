@@ -9,17 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="10dp">
+        android:padding="@dimen/common_margin">
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="乌冲——发声发声法"
             android:textColor="@color/colorMain"
-            android:textSize="20sp"/>
+            android:textSize="17sp"/>
 
         <TextView
             android:id="@+id/tv_time"
@@ -27,7 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_title"
             android:layout_marginTop="10dp"
-            android:text="装车时间：2016-11-01 8：30"/>
+            android:text="装车时间：2016-11-01 8：30"
+            android:textSize="14dp"/>
 
         <TextView
             android:id="@+id/tv_type"
@@ -49,6 +47,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_gravity="right"
             android:background="@drawable/shape_page_round_bg"
             android:gravity="center"
@@ -75,5 +74,79 @@
         android:layout_marginTop="10dp"
         android:numColumns="5"
         android:verticalSpacing="10dp"/>
+
+    <include
+        layout="@layout/layout_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin">
+        <TextView
+            android:id="@+id/text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_order_1"
+            android:text="柜型 1个／*20"
+            android:textColor="@color/titleColor"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/text_1"
+            android:drawableLeft="@drawable/icon_order_2"
+            android:text="重量"
+            android:textColor="@color/titleColor"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/text_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_1"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/icon_order_3"
+            android:text="危险品  否"
+            android:textColor="@color/titleColor"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/text_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/text_2"
+            android:layout_below="@id/text_1"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/text_3"
+            android:drawableLeft="@drawable/icon_order_4"
+            android:text="购买保险  是"
+            android:textColor="@color/titleColor"
+            android:textSize="12sp"/>
+        <Button
+            android:id="@+id/btn_detail"
+            android:layout_width="60dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_shape_bg_min_2"
+            android:text="查看详情"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"/>
+
+        <Button
+            android:id="@+id/btn_location"
+            android:layout_width="60dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btn_detail"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_shape_bg_min_1"
+            android:text="查看位置"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

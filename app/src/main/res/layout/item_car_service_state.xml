@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_com">
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/TextConStyle"
+            android:text="维修状态:"/>
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_1"
+            android:text="正在维修"
+            android:textColor="@color/colorMain"
+            android:textSize="12sp"/>
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_1"
+            android:layout_marginTop="5dp"
+            android:background="@color/lineColor"/>
+
+        <TextView
+            android:id="@+id/tv_3"
+            style="@style/TextConStyle"
+            android:layout_below="@id/view_1"
+            android:layout_marginTop="5dp"
+            android:text="维修时间：2016-09-05"/>
+
+
+        <TextView
+            android:id="@+id/tv_4"
+            style="@style/TextConStyle"
+            android:layout_below="@id/view_1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/tv_3"
+            android:text="维修厂：xxxx4S店"/>
+
+
+        <TextView
+            android:id="@+id/tv_5"
+            style="@style/TextConStyle"
+            android:layout_below="@id/tv_3"
+            android:layout_marginTop="3dp"
+            android:text="维修项目：2016-09-05"/>
+
+
+        <TextView
+            android:id="@+id/tv_6"
+            style="@style/TextConStyle"
+            android:layout_alignLeft="@id/tv_4"
+            android:layout_below="@id/tv_3"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/tv_5"
+            android:text="维修费用：000元"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lineColor"/>
+
+</LinearLayout>

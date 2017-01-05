@@ -2,7 +2,8 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="match_parent"
-             android:layout_height="match_parent">
+             android:layout_height="match_parent"
+             android:background="@color/colorWhite">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -79,6 +80,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:text="加油数量："
                 android:textColor="@color/titleColor"/>
 
@@ -91,21 +93,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:button="@drawable/button_bg_radio_1"
+                    android:background="@drawable/button_bg_radio_1"
+                    android:button="@null"
+                    android:padding="3dp"
                     android:text="柴油"
                     android:textColor="@color/color_bg_radio_1"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:button="@drawable/button_bg_radio_1"
+                    android:background="@drawable/button_bg_radio_1"
+                    android:button="@null"
+                    android:padding="3dp"
                     android:text="93#汽油"
                     android:textColor="@color/color_bg_radio_1"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:button="@drawable/button_bg_radio_1"
+                    android:background="@drawable/button_bg_radio_1"
+                    android:button="@null"
+                    android:padding="3dp"
                     android:text="97#汽油"
                     android:textColor="@color/color_bg_radio_1"/>
             </RadioGroup>

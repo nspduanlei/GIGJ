@@ -17,7 +17,6 @@ public class NewsFragment extends BaseListFragment {
 
     @Override
     protected CommonRecyclerAdapter getAdapter() {
-        hideHead();
         CommonRecyclerAdapter adapter = new CommonRecyclerAdapter<GasolineRecord>(getActivity(),
                 R.layout.item_new,
                 new ArrayList<>()) {
@@ -56,5 +55,10 @@ public class NewsFragment extends BaseListFragment {
     @Override
     protected void loadOtherPage() {
 
+    }
+
+    @Override
+    protected int getFragmentLayout() {
+        return R.layout.fragment_list;
     }
 }

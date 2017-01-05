@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="@dimen/common_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="        发噶阿富汗的哈感觉啊风格的发送到发烧发烧发烧发广告哈哈哈发噶阿富汗的哈感觉啊风格的发送到发烧发烧发烧发广告哈哈哈"/>
+
+</LinearLayout>

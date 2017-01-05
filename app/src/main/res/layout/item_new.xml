@@ -29,7 +29,8 @@
             android:drawableLeft="@drawable/shape_text_left"
             android:lines="1"
             android:text="发发嘎嘎啊哈哈哈哈哈哈哈哈哈哈"
-            android:textColor="@color/titleColor"/>
+            android:textColor="@color/titleColor"
+            android:textSize="14sp"/>
 
         <TextView
             android:id="@+id/tv_content"
@@ -50,7 +51,8 @@
             android:layout_below="@id/tv_content"
             android:layout_marginTop="20dp"
             android:text="2016年9月20日"
-            android:textColor="@color/titleColor"/>
+            android:textColor="@color/titleColor"
+            android:textSize="12sp"/>
     </RelativeLayout>
 
     <include

@@ -4,6 +4,7 @@ package com.app.gigj.domin.entities.func;
  * Created by duanlei on 16/9/13.
  */
 public class MenuEntity {
+    private int id;
     private int resId;
     private String name;
     private int type;
@@ -14,10 +15,11 @@ public class MenuEntity {
         this.name = name;
     }
 
-    public MenuEntity(int resId, String name, int type) {
+    public MenuEntity(int resId, String name, int type, int id) {
         this.type = type;
         this.resId = resId;
         this.name = name;
+        this.id = id;
     }
 
     public MenuEntity(int resId, String name, int type, boolean isSelect) {
@@ -57,5 +59,13 @@ public class MenuEntity {
 
     public void setSelect(boolean select) {
         isSelect = select;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

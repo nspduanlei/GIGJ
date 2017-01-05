@@ -58,7 +58,6 @@ public class LoginActivity extends BaseActivity implements LoginView {
         //test
         mEtPassword.setText("123456");
         mEtPhone.setText("15826508722");
-
     }
 
     @Override
@@ -110,7 +109,6 @@ public class LoginActivity extends BaseActivity implements LoginView {
     @Override
     public void onLoginSuccess(User user) {
         //T.showShort(this, "登录成功");
-
         new ECUtil(this, () -> {
             SPUtils.put(this, SPUtils.PHONE, MD5Util.getMd5UserId(mPhone));
             SPUtils.put(this, SPUtils.PASSWORD, MD5Util.getMd5Password(mPassword));

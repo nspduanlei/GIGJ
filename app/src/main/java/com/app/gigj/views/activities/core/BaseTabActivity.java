@@ -42,17 +42,9 @@ public abstract class BaseTabActivity extends BaseActivity {
 
         mTlTop.setViewPager(mVpContent);
 
-        mTlTop.setOnTabSelectListener(new OnTabSelectListener() {
-            @Override
-            public void onTabSelect(int position) {
-
-            }
-
-            @Override
-            public void onTabReselect(int position) {
-
-            }
-        });
+        if (getTabSelectListener() != null) {
+            mTlTop.setOnTabSelectListener(getTabSelectListener());
+        }
     }
 
     protected void setFragments(ArrayList<Fragment> fragments) {
@@ -62,6 +54,8 @@ public abstract class BaseTabActivity extends BaseActivity {
         mTitles = titles;
     }
 
+
+    protected abstract OnTabSelectListener getTabSelectListener();
 
 
 }

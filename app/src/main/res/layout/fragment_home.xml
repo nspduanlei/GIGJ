@@ -137,21 +137,21 @@
                 android:id="@+id/gv_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:numColumns="3"
-                android:verticalSpacing="20dp"/>
+                android:verticalSpacing="10dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="30dp"
-                android:layout_marginTop="30dp">
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp">
 
                 <Button
                     android:id="@+id/btn_my_safe"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/input_h"
+                    android:layout_height="35dp"
                     android:layout_marginRight="40dp"
                     android:background="@drawable/button_shape_bg_home_1"
                     android:drawableLeft="@drawable/icon_home_bot1"
@@ -162,7 +162,7 @@
                 <Button
                     android:id="@+id/btn_auth_center"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/input_h"
+                    android:layout_height="35dp"
                     android:background="@drawable/button_shape_bg_home_2"
                     android:drawableLeft="@drawable/icon_home_bot2"
                     android:paddingLeft="10dp"

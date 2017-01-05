@@ -92,7 +92,6 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initTabBar() {
-
         mHomeFragment = new HomeFragment();
         mMessageFragment = new MessageFragment();
         mAboutFragment = new AboutFragment();
@@ -125,20 +124,24 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 1: //关于
                         setUpTitle(R.string.title_about);
-
+                        hideMenuText();
                         break;
                     case 2: //发布货源
                         setUpTitle("发布货源");
-
+                        hideMenuText();
                         break;
                     case 3: //消息
                         setUpTitle(R.string.title_msg);
 
-                        break;
+                        setMenuText("发布", v -> {
 
+                        });
+                        break;
                     case 4: //我的
                         setUpTitle(R.string.title_me);
+                        setMenuText("设置", v -> {
 
+                        });
                         break;
                 }
             }

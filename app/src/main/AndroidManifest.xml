@@ -82,13 +82,13 @@
         <activity android:name=".views.activities.SelectListActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".views.activities.driver.GasolineManageActivity"
+        <activity android:name=".views.activities.carOwner.GasolineManageActivity"
                   android:screenOrientation="portrait"/>
 
-        <activity android:name=".views.activities.driver.AddGasolineActivity"
+        <activity android:name=".views.activities.carOwner.AddGasolineActivity"
                   android:screenOrientation="portrait"/>
 
-        <activity android:name=".views.activities.CarTeamActivity"
+        <activity android:name=".views.activities.carOwner.CarTeamActivity"
                   android:screenOrientation="portrait"/>
 
         <activity android:name=".views.activities.shipper.OrdersActivity"
@@ -97,6 +97,23 @@
         <activity android:name=".views.activities.NewsActivity"
                   android:screenOrientation="portrait"/>
 
+        <activity android:name=".views.activities.carOwner.ServiceStateActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.carOwner.AddServiceCarActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.carOwner.AccidentDetailActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.carOwner.AccidentManaActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.carOwner.AddAccidentActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.carOwner.LawServiceActivity"
+                  android:screenOrientation="portrait"/>
 
         <!-- 设置环信应用的AppKey -->
         <meta-data android:name="EASEMOB_APPKEY"  android:value="1109160921115205#glgjapp" />

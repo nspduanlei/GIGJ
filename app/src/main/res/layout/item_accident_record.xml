@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_h">
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/TextConStyle"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:text="2016-09-20"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/TextConStyle"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/tv_time"
+        android:text="法国反对哈哈哈"/>
+
+    <TextView
+        android:id="@+id/tv_look_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_margin"
+        android:background="@color/colorMain"
+        android:padding="2dp"
+        android:text="查看详情"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lineColor"/>
+
+</RelativeLayout>
