@@ -9,6 +9,9 @@
     <include
         layout="@layout/head_break_rules"/>
 
+    <include
+        layout="@layout/layout_line"/>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

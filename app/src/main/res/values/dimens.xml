@@ -51,4 +51,6 @@
     <!--单个信息宽度-->
     <dimen name="single_width">150dp</dimen>
 
+    <dimen name="button_height">40dp</dimen>
+
 </resources>

@@ -4,7 +4,7 @@
 
     <solid android:color="@color/colorWhite"/>
 
-    设置边框
+    <!--设置边框-->
     <stroke
         android:width="0.5dp"
         android:color="@color/hintColor" />

@@ -109,6 +109,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:lines">1</item>
         <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginRight">@dimen/margin_com</item>
     </style>
 
 </resources>

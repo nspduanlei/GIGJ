@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_margin">
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/TextSingleStyle"
+            android:text="报关号：发动嘎嘎嘎嘎"/>
+        <TextView
+            android:id="@+id/tv_2"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_1"
+            android:text="报关类型：发动嘎嘎嘎嘎"/>
+        <TextView
+            android:id="@+id/tv_3"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_2"
+            android:text="报关金额：发动嘎嘎嘎嘎"/>
+
+        <TextView
+            android:id="@+id/tv_4"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_3"
+            android:text="商品名称：发动嘎嘎嘎嘎"/>
+
+        <TextView
+            android:id="@+id/tv_11"
+            style="@style/TextSingleStyle"
+            android:layout_toRightOf="@id/tv_1"
+            android:text="报关来源：发动嘎嘎嘎嘎"/>
+        <TextView
+            android:id="@+id/tv_12"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_11"
+            android:layout_toRightOf="@id/tv_2"
+            android:text="申请日期：发动嘎嘎嘎嘎"/>
+        <TextView
+            android:id="@+id/tv_13"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_12"
+            android:layout_toRightOf="@id/tv_3"
+            android:text="支付状态：发动嘎嘎嘎嘎"/>
+
+        <TextView
+            android:id="@+id/tv_14"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_13"
+            android:layout_toRightOf="@id/tv_4"
+            android:text="审批状态：发动嘎嘎嘎嘎"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_h"
+        android:layout_margin="@dimen/margin_com"
+        android:background="@color/colorMain"
+        android:text="查看详情"
+        android:textColor="@color/colorWhite"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/pageBgColor"/>
+
+
+</LinearLayout>

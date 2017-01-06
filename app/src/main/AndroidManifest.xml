@@ -115,6 +115,44 @@
         <activity android:name=".views.activities.carOwner.LawServiceActivity"
                   android:screenOrientation="portrait"/>
 
+        <activity android:name=".views.activities.carOwner.BreakRulesActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.carOwner.AddBreakRulesActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.carOwner.AddCarCheckActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.shipper.MyCustomsActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.shipper.AddAddressActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.shipper.AddressManaActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.shipper.MyChitActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.shipper.EvaluateActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.UpdatePwActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".views.activities.admin.HelpCenterActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".views.activities.admin.ServiceRuleActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".views.activities.admin.FeedbackActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".views.activities.admin.IssueActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".views.activities.admin.VersionActivity"
+                  android:screenOrientation="portrait"/>
+
         <!-- 设置环信应用的AppKey -->
         <meta-data android:name="EASEMOB_APPKEY"  android:value="1109160921115205#glgjapp" />
         <!-- 声明SDK所需的service SDK核心功能-->

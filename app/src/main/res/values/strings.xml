@@ -38,4 +38,8 @@
     <string name="title_accident_add">添加事故</string>
     <string name="title_break_rules">违章信息管理</string>
     <string name="title_car_check">年检信息</string>
+    <string name="title_my_fund">我的资金</string>
+    <string name="title_my_customs">我的报关</string>
+    <string name="title_address_mana">我的常用路线</string>
+    <string name="title_update_pw">修改密码</string>
 </resources>

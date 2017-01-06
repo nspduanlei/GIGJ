@@ -7,21 +7,19 @@ import com.app.gigj.app.MyApplication;
 import com.app.gigj.views.activities.core.BaseActivity;
 
 /**
- * Created by duanlei on 2016/12/30.
+ * Created by duanlei on 2017/1/6.
  */
 
-public class AboutUsActivity extends BaseActivity {
-
+public class UpdatePwActivity extends BaseActivity {
     @Override
     protected void setUpContentView() {
-        setContentView(R.layout.activity_about_us, R.string.title_about_us);
+        setContentView(R.layout.activity_update_pw, R.string.title_update_pw);
     }
 
     @Override
     protected void initUi(Bundle savedInstanceState) {
 
     }
-
 
     @Override
     protected void initDependencyInjector(MyApplication application) {

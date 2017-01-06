@@ -28,7 +28,8 @@ public class UserInfoActivity extends BaseActivity {
         mUserId = (String) SPUtils.get(this, SPUtils.USER_NO, "");
         if (!mUserId.equals("")) {
             setMenuText("修改密码", v -> {
-
+                Intent intent = new Intent(this, UpdatePwActivity.class);
+                startActivity(intent);
             });
 
             mIsShow = true;

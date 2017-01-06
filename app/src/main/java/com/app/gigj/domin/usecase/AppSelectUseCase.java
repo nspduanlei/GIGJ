@@ -54,14 +54,34 @@ public class AppSelectUseCase extends UseCase<AppSelectResponseEnvelope> {
                 "\",opens:\"APP\",pages:\"0\",rows:\"0\",sqlcnt:\"1\",xml01:[{CXTJ:\"1=1\"}]}");
     }
 
+    /**
+     * 添加地址获取行政区域， 省
+     */
+    public void setAddProData(String userId, String password) {
+        setData("{busiid:\"10100052\",userid:\"" + userId +
+                "\",opens:\"APP\",pages:\"0\",rows:\"0\",sqlcnt:\"1\",xml01:[{KYBZ:\"0\"}]}",
+                password);
+    }
+
+    private void setData(String jsonData, String password) {
+        GetAreaRequestBody requestBody = new GetAreaRequestBody();
+        GetArea baseRequest = new GetArea();
+
+        baseRequest.setUserIdMd5(MD5Util.getMd5UserId(Constants.USER_ID));
+        baseRequest.setPasswordMd5(password);
+        baseRequest.setUserId(Constants.USER_ID);
+        baseRequest.setJsonData(jsonData);
+
+        requestBody.setGetArea(baseRequest);
+        mRequestEnvelope.setBody(requestBody);
+    }
+
     private void setData(String jsonData) {
         GetAreaRequestBody requestBody = new GetAreaRequestBody();
         GetArea baseRequest = new GetArea();
 
         baseRequest.setUserIdMd5(MD5Util.getMd5UserId(Constants.USER_ID));
         baseRequest.setPasswordMd5(MD5Util.getMd5Password(Constants.PASSWORD));
-        //baseRequest.setUserIdMd5("fa5023fc97cd4589");
-        //baseRequest.setPasswordMd5("d8f3e71549e3d7f1");
         baseRequest.setUserId(Constants.USER_ID);
         baseRequest.setJsonData(jsonData);
 

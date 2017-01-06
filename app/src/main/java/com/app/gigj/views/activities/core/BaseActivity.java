@@ -64,6 +64,10 @@ public abstract class BaseActivity extends AppCompatActivity implements Toolbar.
         setContentView(layoutResID, titleResId, -1, MODE_BACK);
     }
 
+    public void setContentView(int layoutResID, String title) {
+        setContentView(layoutResID, title, -1, MODE_BACK);
+    }
+
     public void setContentView(int layoutResID, int titleResId, int mode) {
         setContentView(layoutResID, titleResId, -1, mode);
     }
@@ -75,6 +79,15 @@ public abstract class BaseActivity extends AppCompatActivity implements Toolbar.
         super.setContentView(layoutResID);
         ButterKnife.bind(this);
         setUpToolbar(titleResId, menuId, mode);
+    }
+
+    public void setContentView(int layoutResID, String title, int menuId, int mode) {
+        if (layoutResID == -1) {
+            return;
+        }
+        super.setContentView(layoutResID);
+        ButterKnife.bind(this);
+        setUpToolbar(title, menuId, mode);
     }
 
     protected void setUpToolbar(int titleResId, int menuId, int mode) {
@@ -92,6 +105,25 @@ public abstract class BaseActivity extends AppCompatActivity implements Toolbar.
             mToolbar.setNavigationOnClickListener(view -> onNavigationBtnClicked());
 
             setUpTitle(titleResId);
+            setUpMenu(menuId);
+        }
+    }
+
+    protected void setUpToolbar(String title, int menuId, int mode) {
+        if (mode != MODE_NONE) {
+
+            mToolbar = (Toolbar) findViewById(R.id.toolbar);
+            mToolbarTitle = (TextView) findViewById(R.id.toolbar_title);
+            mToolbarBtn = (ImageView) findViewById(R.id.toolbar_image);
+            mMenuText = (TextView) findViewById(R.id.tv_menu);
+
+            if (mode == MODE_BACK) {
+                mToolbar.setNavigationIcon(R.drawable.arrow_back);
+            }
+
+            mToolbar.setNavigationOnClickListener(view -> onNavigationBtnClicked());
+
+            setUpTitle(title);
             setUpMenu(menuId);
         }
     }

@@ -2,6 +2,7 @@ package com.app.gigj.injector.modules;
 
 import com.app.gigj.domin.model.request.core.RequestEnvelope;
 import com.app.gigj.domin.repository.Repository;
+import com.app.gigj.domin.usecase.AddAddressUseCase;
 import com.app.gigj.domin.usecase.AppSelectUseCase;
 import com.app.gigj.domin.usecase.LoginUseCase;
 import com.app.gigj.domin.usecase.SendCodeUseCase;
@@ -18,16 +19,6 @@ import rx.Scheduler;
  */
 @Module
 public class UserModule {
-
-//    @Provides
-//    @Activity
-//    LoginUseCase provideLoginUseCase(
-//            GoodsRepository repository,
-//            @Named("ui_thread") Scheduler uiThread,
-//            @Named("executor_thread") Scheduler executorThread,
-//            @Named("gson") Gson gson) {
-//        return new LoginUseCase(repository, uiThread, executorThread, gson);
-//    }
 
     @Provides
     @Activity
@@ -57,5 +48,15 @@ public class UserModule {
             @Named("ui_thread") Scheduler uiThread,
             @Named("executor_thread") Scheduler executorThread) {
         return new LoginUseCase(repository, uiThread, executorThread, requestEnvelope);
+    }
+
+    @Provides
+    @Activity
+    AddAddressUseCase provideAddAddressUseCase(
+            RequestEnvelope requestEnvelope,
+            Repository repository,
+            @Named("ui_thread") Scheduler uiThread,
+            @Named("executor_thread") Scheduler executorThread) {
+        return new AddAddressUseCase(repository, uiThread, executorThread, requestEnvelope);
     }
 }

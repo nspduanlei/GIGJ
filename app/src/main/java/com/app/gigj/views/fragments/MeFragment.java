@@ -15,11 +15,18 @@ import com.app.gigj.domin.entities.func.MenuEntity;
 import com.app.gigj.support.picasso.ImageLoad;
 import com.app.gigj.utils.MyUtils;
 import com.app.gigj.utils.SPUtils;
-import com.app.gigj.views.activities.carOwner.CarTeamActivity;
+import com.app.gigj.views.activities.admin.AboutUsActivity;
 import com.app.gigj.views.activities.UserInfoActivity;
 import com.app.gigj.views.activities.carOwner.AccidentManaActivity;
-import com.app.gigj.views.activities.carOwner.ServiceStateActivity;
+import com.app.gigj.views.activities.carOwner.BreakRulesActivity;
+import com.app.gigj.views.activities.carOwner.CarTeamActivity;
 import com.app.gigj.views.activities.carOwner.GasolineManageActivity;
+import com.app.gigj.views.activities.carOwner.ServiceStateActivity;
+import com.app.gigj.views.activities.shipper.AddressManaActivity;
+import com.app.gigj.views.activities.shipper.EvaluateActivity;
+import com.app.gigj.views.activities.shipper.MyChitActivity;
+import com.app.gigj.views.activities.shipper.MyCustomsActivity;
+import com.app.gigj.views.activities.shipper.MyFundActivity;
 import com.app.gigj.views.activities.shipper.OrdersActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
 import com.app.gigj.views.widget.listView.CommonAdapter;
@@ -94,7 +101,7 @@ public class MeFragment extends BaseFragment {
         titles.add(new MenuEntity(R.drawable.icon_me_lv4, "我的车队", 1, 3));
         titles.add(new MenuEntity(R.drawable.icon_me_lv5, "我的报关", 1, 4));
         titles.add(new MenuEntity(R.drawable.icon_me_lv6, "地址管理", 1, 5));
-        titles.add(new MenuEntity(R.drawable.icon_me_lv7, "评价查看", 1, 5));
+        titles.add(new MenuEntity(R.drawable.icon_me_lv7, "评价查看", 1, 6));
         titles.add(new MenuEntity(R.drawable.icon_me_lv8, "关于我们", 1, 7));
         titles.add(new MenuEntity(R.drawable.icon_me_lv9, "退出", 1, 8));
 
@@ -137,21 +144,31 @@ public class MeFragment extends BaseFragment {
                         intent = new Intent(getActivity(), OrdersActivity.class);
                         startActivity(intent);
                         break;
-                    case 1:
-                        break;
+//                    case 1:
+//                        break;
                     case 2:
+                        intent = new Intent(getActivity(), MyFundActivity.class);
+                        startActivity(intent);
                         break;
                     case 3:
                         intent = new Intent(getActivity(), CarTeamActivity.class);
                         startActivity(intent);
                         break;
                     case 4:
+                        intent = new Intent(getActivity(), MyCustomsActivity.class);
+                        startActivity(intent);
                         break;
                     case 5:
+                        intent = new Intent(getActivity(), AddressManaActivity.class);
+                        startActivity(intent);
                         break;
                     case 6:
+                        intent = new Intent(getActivity(), EvaluateActivity.class);
+                        startActivity(intent);
                         break;
                     case 7:
+                        intent = new Intent(getActivity(), AboutUsActivity.class);
+                        startActivity(intent);
                         break;
                     case 8:
                         MyUtils.loginOut(getActivity());
@@ -194,9 +211,17 @@ public class MeFragment extends BaseFragment {
                     intent = new Intent(getActivity(), AccidentManaActivity.class);
                     startActivity(intent);
                     break;
+                case 2:
+                    intent = new Intent(getActivity(), BreakRulesActivity.class);
+                    startActivity(intent);
+                    break;
                 case 3:
+                    intent = new Intent(getActivity(), BreakRulesActivity.class);
+                    intent.putExtra(BreakRulesActivity.ARG_TYPE, 1);
+                    startActivity(intent);
                     break;
                 case 4:
+
                     break;
                 case 5:
                     intent = new Intent(getActivity(), GasolineManageActivity.class);
@@ -207,6 +232,8 @@ public class MeFragment extends BaseFragment {
                     startActivity(intent);
                     break;
                 case 7:
+                    intent = new Intent(getActivity(), MyChitActivity.class);
+                    startActivity(intent);
                     break;
             }
         });

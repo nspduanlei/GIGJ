@@ -1,11 +1,17 @@
 package com.app.gigj.views.fragments;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ListView;
 
 import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
-import com.app.gigj.utils.T;
+import com.app.gigj.views.activities.admin.AboutUsActivity;
+import com.app.gigj.views.activities.admin.FeedbackActivity;
+import com.app.gigj.views.activities.admin.HelpCenterActivity;
+import com.app.gigj.views.activities.admin.IssueActivity;
+import com.app.gigj.views.activities.admin.ServiceRuleActivity;
+import com.app.gigj.views.activities.admin.VersionActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
 import com.app.gigj.views.widget.listView.CommonAdapter;
 import com.app.gigj.views.widget.listView.MyViewHolder;
@@ -49,7 +55,39 @@ public class AboutFragment extends BaseFragment {
         };
 
         adapter.setOnItemClickListener((data, position) -> {
-            T.showShort(getActivity(), position+"");
+            Intent intent;
+            switch (position) {
+                case 0:
+                    intent = new Intent(getActivity(), AboutUsActivity.class);
+                    startActivity(intent);
+                    break;
+                case 1:
+                    intent = new Intent(getActivity(), HelpCenterActivity.class);
+                    startActivity(intent);
+                    break;
+                case 2:
+                    intent = new Intent(getActivity(), ServiceRuleActivity.class);
+                    startActivity(intent);
+                    break;
+                case 3:
+                    intent = new Intent(getActivity(), FeedbackActivity.class);
+                    startActivity(intent);
+                    break;
+                case 4:
+                    intent = new Intent(getActivity(), IssueActivity.class);
+                    startActivity(intent);
+                    break;
+                case 5:
+                    intent = new Intent(getActivity(), VersionActivity.class);
+                    startActivity(intent);
+                    break;
+                case 6:
+                    //TODO  清空缓存
+
+
+                    break;
+
+            }
         });
 
         mLvMenu.setAdapter(adapter);

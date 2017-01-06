@@ -9,12 +9,12 @@ import com.app.gigj.R;
 import com.app.gigj.app.MyApplication;
 import com.app.gigj.domin.entities.func.MenuEntity;
 import com.app.gigj.utils.SPUtils;
-import com.app.gigj.utils.T;
 import com.app.gigj.views.activities.NewsActivity;
 import com.app.gigj.views.activities.carOwner.AccidentManaActivity;
-import com.app.gigj.views.activities.carOwner.ServiceStateActivity;
 import com.app.gigj.views.activities.carOwner.GasolineManageActivity;
+import com.app.gigj.views.activities.carOwner.ServiceStateActivity;
 import com.app.gigj.views.activities.shipper.AuthCenterActivity;
+import com.app.gigj.views.activities.shipper.MyChitActivity;
 import com.app.gigj.views.activities.shipper.OrdersActivity;
 import com.app.gigj.views.fragments.core.BaseFragment;
 import com.app.gigj.views.widget.listView.CommonAdapter;
@@ -67,7 +67,6 @@ public class HomeFragment extends BaseFragment {
         };
 
         adapter.setOnItemClickListener((data, position) -> {
-            T.showShort(getActivity(), position + "");
             Intent intent;
             switch (position) {
                 case 0:
@@ -96,8 +95,6 @@ public class HomeFragment extends BaseFragment {
                     startActivity(intent);
                     break;
             }
-
-
         });
 
         mGvButtons.setAdapter(adapter);
@@ -120,8 +117,8 @@ public class HomeFragment extends BaseFragment {
 
     @OnClick(R.id.btn_my_safe)
     void onMySafeClicked(View view) {
-
-
+        Intent intent = new Intent(getActivity(), MyChitActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.btn_auth_center)
