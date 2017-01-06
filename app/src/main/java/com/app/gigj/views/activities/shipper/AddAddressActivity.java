@@ -38,7 +38,7 @@ public class AddAddressActivity extends BaseActivity implements AddAddrView {
         mUserId = (String) SPUtils.get(this, SPUtils.USER_NO, "");
         mPassword = (String) SPUtils.get(this, SPUtils.PASSWORD, "");
 
-        mAddAddrPresenter.addAddr("", "地址详情", mUserId, mPassword);
+        //mAddAddrPresenter.addAddr("", "地址详情", mUserId, mPassword);
     }
 
     @Override

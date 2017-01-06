@@ -57,7 +57,7 @@ public class AddAddressUseCase extends UseCase<LoginResponseEnvelope> {
         addAddress.setArg5("his_center");
         addAddress.setArg6("20100080");
         addAddress.setArg7("1");
-        addAddress.setArg8("{\"arg1\":\"\",\"arg2\":””,\"arg3\":\"\",\"arg4\":\"\",\"arg5\":\"\",\"arg6\":\"\"," +
+        addAddress.setArg8("{\"arg1\":\"\",\"arg2\":\"\",\"arg3\":\"\",\"arg4\":\"\",\"arg5\":\"\",\"arg6\":\"\"," +
                 "\"xml1\":[{YHID:\"" + userId + "\",QHID:\"" + areaId + "\",XXDZ:\"" + detail + "\",\"XPOS\":\"0.0\",\"YPOS\":\"0.0\"}]}");
 
         requestBody.setAddAddress(addAddress);
