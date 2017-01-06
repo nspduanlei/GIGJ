@@ -36,4 +36,6 @@
     <string name="title_law_service">法律服务</string>
     <string name="title_accident_mana">事故处理详情</string>
     <string name="title_accident_add">添加事故</string>
+    <string name="title_break_rules">违章信息管理</string>
+    <string name="title_car_check">年检信息</string>
 </resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorWhite"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin">
+
+        <TextView
+            android:id="@+id/tv_1"
+            style="@style/TextSingleStyle"
+            android:text="ID：bingbin"/>
+
+        <TextView
+            android:id="@+id/tv_2"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_1"
+            android:text="车辆编号：123766"/>
+
+        <TextView
+            android:id="@+id/tv_3"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_2"
+            android:text="违章时间：3016-09-20"/>
+
+        <TextView
+            android:id="@+id/tv_4"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_3"
+            android:text="罚款：200元"/>
+
+        <TextView
+            android:id="@+id/tv_5"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_4"
+            android:text="扣分：5分"/>
+
+        <TextView
+            android:id="@+id/tv_6"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_5"
+            android:text="驾驶员：张某某"/>
+
+
+        <TextView
+            android:id="@+id/tv_11"
+            style="@style/TextSingleStyle"
+            android:layout_toRightOf="@id/tv_1"
+            android:text="违章地点：gaggagagagagagag"/>
+
+        <TextView
+            android:id="@+id/tv_22"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_11"
+            android:layout_toRightOf="@id/tv_2"
+            android:text="备注：bingbin发发噶啊嘎嘎嘎"/>
+
+        <TextView
+            android:id="@+id/tv_33"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_22"
+            android:layout_toRightOf="@id/tv_3"
+            android:text="办理日期：2016-05-06"/>
+
+        <TextView
+            android:id="@+id/tv_44"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_33"
+            android:layout_toRightOf="@id/tv_4"
+            android:text="经办人：bingbin"/>
+
+        <TextView
+            android:id="@+id/tv_55"
+            style="@style/TextSingleStyle"
+            android:layout_below="@id/tv_44"
+            android:layout_toRightOf="@id/tv_5"
+            android:text="状态：未处理"/>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/layout_line"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/margin_com"
+        android:drawableLeft="@drawable/icon_del"
+        android:gravity="center_vertical"
+        android:text="删除"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/pageBgColor"/>
+
+</LinearLayout>

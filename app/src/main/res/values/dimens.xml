@@ -4,7 +4,7 @@
     <dimen name="top_bar_height">44dp</dimen>
 
     <!--页面内容边距-->
-    <dimen name="common_margin">8dp</dimen>
+    <dimen name="common_margin">15dp</dimen>
 
     <!--表单项内边距-->
     <dimen name="form_padding">20dp</dimen>
@@ -47,5 +47,8 @@
 
     <!--头像大小-->
     <dimen name="user_head_size">60dp</dimen>
+
+    <!--单个信息宽度-->
+    <dimen name="single_width">150dp</dimen>
 
 </resources>

@@ -10,10 +10,10 @@ import com.app.gigj.views.activities.core.BaseActivity;
  * Created by duanlei on 2017/1/5.
  */
 
-public class AddBreakRulesActivity extends BaseActivity {
+public class AddCarCheckActivity extends BaseActivity {
     @Override
     protected void setUpContentView() {
-        setContentView(R.layout.fragment_break_rules, R.string.title_break_rules);
+        setContentView(R.layout.activity_car_check_add, R.string.title_car_check);
     }
 
     @Override
